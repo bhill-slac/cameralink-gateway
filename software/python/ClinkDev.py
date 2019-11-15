@@ -61,6 +61,7 @@ class ClinkDev(kcu1500.Core):
             numLane     = 4,               # Number of PGP lanes
             camType     = ['Opal1000',None],
             defaultFile = None,
+            serverPort  = None,
             **kwargs
         ):
         super().__init__(
@@ -174,6 +175,7 @@ class ClinkDev(kcu1500.Core):
             pollEn   = self._pollEn,
             initRead = self._initRead,
             timeout  = self._timeout,
+            zmqPort  = self._serverPort,
         )
         
         # Hide all the "enable" variables
@@ -264,4 +266,4 @@ class ClinkDev(kcu1500.Core):
         super().initialize()    
         self.StopRun()
         self.CountReset()
-        
+
