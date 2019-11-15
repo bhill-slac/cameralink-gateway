@@ -36,6 +36,7 @@ class ClinkDevRoot(shared.Root):
                  numLanes    = 4,               # Number of PGP lanes
                  camType     = None,
                  defaultFile = None,
+                 serverPort  = None,
                  clDevTarget = clDev.ClinkDevKcu1500,
                  **kwargs):
 
@@ -67,6 +68,7 @@ class ClinkDevRoot(shared.Root):
             pollEn      = pollEn,
             initRead    = initRead,
             numLanes    = laneSize,
+            serverPort  = serverPort,
             **kwargs)
 
         print( "Created rogue root w/ pollEn=%s, serverPort=%s" % ( self._pollEn, self._serverPort ) )
