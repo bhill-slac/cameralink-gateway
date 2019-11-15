@@ -35,6 +35,7 @@ class ClinkDevRoot(shared.Root):
                  numLanes    = 4,               # Number of PGP lanes
                  camType     = None,
                  defaultFile = None,
+                 serverPort  = None,
                  clDevTarget = clDev.ClinkDevKcu1500,                 
                  **kwargs):
         
@@ -67,6 +68,7 @@ class ClinkDevRoot(shared.Root):
             pollEn      = pollEn, 
             initRead    = initRead, 
             numLanes    = laneSize, 
+            serverPort  = serverPort,
             **kwargs)
         print( "Created rogue root w/ pollEn=%s, serverPort=%s" % ( self._pollEn, self._serverPort ) )
             
@@ -207,22 +209,18 @@ class ClinkDevRoot(shared.Root):
                 
             # Update the run state status variable
             self.RunState.set(True)                 
-<<<<<<< HEAD:firmware/python/cameralink_gateway/_ClinkDevRoot.py
                         
     def start(self, **kwargs):                        
         super().start(**kwargs)
-=======
 
-        print( "Start PGP App w/ pollEn=%s, zmqPort=%s" % ( str(self._pollEn), str(self._serverPort) ) )
-
+        #print( "Start PGP App w/ pollEn=%s, zmqPort=%s" % ( str(self._pollEn), str(self._serverPort) ) )
         # Start the system
-        self.start(
-            pollEn   = self._pollEn,
-            initRead = self._initRead,
-            timeout  = self._timeout,
-            zmqPort  = self._serverPort,
-        )
->>>>>>> 09cda45... Added some misc diag print stmts related to passing args through creation of root device:software/python/ClinkDev.py
+        #self.start(
+        #	pollEn   = self._pollEn,
+        #	initRead = self._initRead,
+        #	timeout  = self._timeout,
+        #	zmqPort  = self._serverPort,
+        #)
         
         # Hide all the "enable" variables
         for enableList in self.find(typ=pr.EnableVariable):
