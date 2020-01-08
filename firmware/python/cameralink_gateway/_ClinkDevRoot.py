@@ -59,6 +59,7 @@ class ClinkDevRoot(shared.Root):
         else:
             kwargs['timeout'] = 5000000 # 5 s
         
+        print( "Creating rogue root w/ pollEn=%s, serverPort=%s" % ( pollEn, serverPort ) )
         # Pass custom value to parent via super function
         super().__init__(
             dev         = dev, 
@@ -67,6 +68,7 @@ class ClinkDevRoot(shared.Root):
             initRead    = initRead, 
             numLanes    = laneSize, 
             **kwargs)
+        print( "Created rogue root w/ pollEn=%s, serverPort=%s" % ( self._pollEn, self._serverPort ) )
             
         # Create memory interface
         self.memMap = axipcie.createAxiPcieMemMap(dev, 'localhost', 8000)            
@@ -78,8 +80,17 @@ class ClinkDevRoot(shared.Root):
             numLanes = laneSize,
             pgp3     = pgp3,
             expand   = True,
-        ))    
-            
+        ))
+#
+#		print( "Creating PGP App w/ pollEn=%s, numLane=%u" % ( pollEn, numLane ) )
+#
+#		# PGP Application on PCIe 
+#		self.add(app.Application(
+#			memBase  = self._memMap,
+#			numLane  = numLane,
+#			expand   = True,
+#		))
+
         # Create DMA streams
         self.dmaStreams = axipcie.createAxiPcieDmaStreams(dev, {lane:{dest for dest in range(4)} for lane in range(laneSize)}, 'localhost', 8000)            
 
@@ -196,9 +207,22 @@ class ClinkDevRoot(shared.Root):
                 
             # Update the run state status variable
             self.RunState.set(True)                 
+<<<<<<< HEAD:firmware/python/cameralink_gateway/_ClinkDevRoot.py
                         
     def start(self, **kwargs):                        
         super().start(**kwargs)
+=======
+
+        print( "Start PGP App w/ pollEn=%s, zmqPort=%s" % ( str(self._pollEn), str(self._serverPort) ) )
+
+        # Start the system
+        self.start(
+            pollEn   = self._pollEn,
+            initRead = self._initRead,
+            timeout  = self._timeout,
+            zmqPort  = self._serverPort,
+        )
+>>>>>>> 09cda45... Added some misc diag print stmts related to passing args through creation of root device:software/python/ClinkDev.py
         
         # Hide all the "enable" variables
         for enableList in self.find(typ=pr.EnableVariable):
