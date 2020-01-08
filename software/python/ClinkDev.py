@@ -64,6 +64,7 @@ class ClinkDev(kcu1500.Core):
             serverPort  = None,
             **kwargs
         ):
+        print( "Creating rogue root w/ pollEn=%s, serverPort=%s" % ( pollEn, serverPort ) )
         super().__init__(
             name        = name, 
             description = description, 
@@ -72,13 +73,16 @@ class ClinkDev(kcu1500.Core):
             numLane     = numLane, 
             **kwargs
         )
+        print( "Created rogue root w/ pollEn=%s, serverPort=%s" % ( self._pollEn, self._serverPort ) )
         
         self.defaultFile = defaultFile
         
         # Set the min. firmware Versions
         self.minPcieVersion = 0x01000200
         self.minFebVersion  = 0x01000200
-        
+
+        print( "Creating PGP App w/ pollEn=%s, numLane=%u" % ( pollEn, numLane ) )
+
         # PGP Application on PCIe 
         self.add(app.Application(
             memBase  = self._memMap,
@@ -169,7 +173,9 @@ class ClinkDev(kcu1500.Core):
                 
             # Update the run state status variable
             self.RunState.set(True)                 
-                
+
+        print( "Start PGP App w/ pollEn=%s, zmqPort=%s" % ( str(self._pollEn), str(self._serverPort) ) )
+
         # Start the system
         self.start(
             pollEn   = self._pollEn,
