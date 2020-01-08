@@ -38,3 +38,5 @@ build*
 *.gz
 *.ltx
 *.dcp
+
+software/yaml/
