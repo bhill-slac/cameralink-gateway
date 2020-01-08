@@ -180,10 +180,10 @@ class ClinkDev(kcu1500.Core):
 
         # Start the system
         self.start(
-            pollEn   = self._pollEn,
-            initRead = self._initRead,
-            timeout  = self._timeout,
-            zmqPort  = self._serverPort,
+            #pollEn   = self._pollEn,
+            #initRead = self._initRead,
+            #timeout  = self._timeout,
+            #zmqPort  = self._serverPort,
         )
         
         # Hide all the "enable" variables
