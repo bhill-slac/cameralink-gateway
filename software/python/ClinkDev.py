@@ -71,6 +71,8 @@ class ClinkDev(kcu1500.Core):
             dev         = dev, 
             version3    = version3, 
             numLane     = numLane, 
+            pollEn  	= pollEn,
+            serverPort  = serverPort,
             **kwargs
         )
         print( "Created rogue root w/ pollEn=%s, serverPort=%s" % ( self._pollEn, self._serverPort ) )
