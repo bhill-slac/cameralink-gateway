@@ -113,8 +113,12 @@ camLinkDev = ClinkDev.ClinkDev(
 
 #################################################################
 
-# # Dump the address map
+# Dump the address map
 camLinkDev.saveAddressMap( "addressMapDump.dump" )
+
+# Write yaml files for Root device and subdevices
+import pyrogue.utilities.cpsw
+pyrogue.utilities.cpsw.exportRoot( camLinkDev, "." )
 
 # Create GUI
 appTop = pyrogue.gui.application(sys.argv)
