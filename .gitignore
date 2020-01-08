@@ -39,3 +39,5 @@ release*
 *.gz
 *.ltx
 *.dcp
+
+software/yaml/
