@@ -8,6 +8,7 @@
 # copied, modified, propagated, or distributed except according to the terms 
 # contained in the LICENSE.txt file.
 #-----------------------------------------------------------------------------
+import setupLibPaths
 import pyrogue as pr
 
 import rogue.protocols
@@ -62,6 +63,7 @@ class ClinkDev(kcu1500.Core):
             camType     = ['Opal1000',None],
             defaultFile = None,
             serverPort  = None,
+            timeout     = 1.0,
             **kwargs
         ):
         print( "Creating rogue root w/ pollEn=%s, serverPort=%s" % ( pollEn, serverPort ) )
@@ -73,6 +75,7 @@ class ClinkDev(kcu1500.Core):
             numLane     = numLane, 
             pollEn  	= pollEn,
             serverPort  = serverPort,
+            timeout     = timeout,
             **kwargs
         )
         print( "Created rogue root w/ pollEn=%s, serverPort=%s" % ( self._pollEn, self._serverPort ) )
