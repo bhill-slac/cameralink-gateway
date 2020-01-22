@@ -25,7 +25,7 @@ import rogue.interfaces.stream
 
 import click
 
-rogue.Version.minVersion('3.7.0') 
+rogue.Version.minVersion('3.7.0')
 
 class MyCustomMaster(rogue.interfaces.stream.Master):
 
@@ -46,7 +46,7 @@ class MyCustomMaster(rogue.interfaces.stream.Master):
 
         # Write the data to the frame at offset 0
         frame.write(ba,0)
-        
+
         # Send the frame to the currently attached slaves
         self._sendFrame(frame)
 
@@ -66,7 +66,7 @@ class ClinkDev(kcu1500.Core):
             timeout     = 1.0,
             **kwargs
         ):
-        print( "Creating rogue root w/ pollEn=%s, serverPort=%s" % ( pollEn, serverPort ) )
+        print( "Creating rogue root w/ pollEn=%s, serverPort=%s, timeout=%f" % ( pollEn, serverPort, timeout ) )
         super().__init__(
             name        = name, 
             description = description, 
@@ -78,7 +78,7 @@ class ClinkDev(kcu1500.Core):
             timeout     = timeout,
             **kwargs
         )
-        print( "Created rogue root w/ pollEn=%s, serverPort=%s" % ( self._pollEn, self._serverPort ) )
+        print( "Created rogue root w/ pollEn=%s, serverPort=%s, timeout=%f" % ( self._pollEn, self._serverPort, self._timeout ) )
         
         self.defaultFile = defaultFile
         
@@ -162,7 +162,7 @@ class ClinkDev(kcu1500.Core):
             # Update the run state status variable
             self.RunState.set(False)
                 
-        @self.command(description  = 'starts the triggers and allow steams to flow to DMA engine')        
+        @self.command(description  = 'starts the triggers and allow streams to flow to DMA engine')
         def StartRun():
             print ('ClinkDev.StartRun() executed')
             
@@ -278,3 +278,7 @@ class ClinkDev(kcu1500.Core):
         self.StopRun()
         self.CountReset()
 
+    # Needed as PyObject_GetAttrString does not find functions in parent class hierarchy
+    def stop(self):
+        self.StopRun()
+        super().stop()
