@@ -118,7 +118,10 @@ camLinkDev.saveAddressMap( "addressMapDump.dump" )
 
 # Write yaml files for Root device and subdevices
 import pyrogue.utilities.cpsw
-pyrogue.utilities.cpsw.exportRoot( camLinkDev, "." )
+deviceList = {}
+pyrogue.utilities.cpsw.exportDevice( camLinkDev, deviceList, "yaml" )
+import pprint
+#pprint.pprint( f'Device List: {deviceList}' )
 
 # Create GUI
 appTop = pyrogue.gui.application(sys.argv)
