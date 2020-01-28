@@ -21,7 +21,7 @@ ClinkDev:
         UartOpal1000: # OPAL 1000 UART interface
           OR: '12'     # Output resolution, i.e. bits per pixel.  Set to 12. (value from Bruce Hill)
           MO: '1'      # Pulse width exposure control (value from Bruce Hill)
-          VBIN: '1'    # Vertical binning, set to 1. (value from Bruce Hill)
+          VBIN: '0'    # Vertical binning, set to 0. (value from Bruce Hill)
           VR: '1'      # Enable vertical remapping (deinterlace on camera w/ 4ms delay, value from Bruce Hill)
           CCE[0]: '0'  # Normal Polarity CC1 trigger  (value from Bruce Hill)
           CCE[1]: '0'  # Normal Polarity CC1 trigger  (value from Bruce Hill)
