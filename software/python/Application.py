@@ -13,6 +13,7 @@ import pyrogue as pr
 
 import surf.protocols.batcher as batcher
 
+# Note: AppLane now in self.ClinkPcie.Application.AppLane[lane]
 class AppLane(pr.Device):
     def __init__(   self,       
             name        = "AppLane",

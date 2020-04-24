@@ -26,6 +26,7 @@ import rogue.interfaces.stream
 import click
 
 rogue.Version.minVersion('3.7.0')
+#rogue.Version.minVersion('4.10.3')
 
 class MyCustomMaster(rogue.interfaces.stream.Master):
 
@@ -50,6 +51,8 @@ class MyCustomMaster(rogue.interfaces.stream.Master):
         # Send the frame to the currently attached slaves
         self._sendFrame(frame)
 
+# Looks to be replaced by class ClinkDevRoot(shared.Root) in
+# firmware/python/cameralink_gateway/_ClinkDevRoot.py
 class ClinkDev(kcu1500.Core):
 
     def __init__(self,
@@ -87,6 +90,9 @@ class ClinkDev(kcu1500.Core):
         self.minFebVersion  = 0x01000200
 
         print( "Creating PGP App w/ pollEn=%s, numLane=%u" % ( pollEn, numLane ) )
+
+        # Note: self._memMap previously created in kcu1500.Core
+        # Now its in the ClinkDevRoot class
 
         # PGP Application on PCIe 
         self.add(app.Application(
