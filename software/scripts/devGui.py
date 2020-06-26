@@ -187,10 +187,25 @@ if __name__ == "__main__":
             seuDumpDir     = args.seuDumpDir,
         ) as root:
 
-        pyrogue.pydm.runPyDM(
-            root  = root,
-            sizeX = 800,
-            sizeY = 1000,
-        )
+        # Dump the address map
+        root.saveAddressMap( "addressMapDump.dump" )
+        root.saveAddressMap( "addressMapDump.h", headerEn=True )
+
+        ######################
+        # Development PyDM GUI
+        ######################
+        if (args.guiType == 'PyDM'):
+
+            pyrogue.pydm.runPyDM(
+                root  = root,
+                sizeX = 800,
+                sizeY = 1000,
+            )
+
+        ####################
+        # Undefined GUI type
+        ####################
+        else:
+            raise ValueError("Invalid GUI type (%s)" % (args.guiType) )
 
     #################################################################
