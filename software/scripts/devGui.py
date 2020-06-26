@@ -180,6 +180,14 @@ if __name__ == "__main__":
             clDevTarget    = clDevTarget,
         ) as root:
 
+#################################################################################
+# Commented out because not supported in rogue @ v4.11.1
+# and rogue v5 is not stable yet https://jira.slac.stanford.edu/browse/ESCLINK-21
+#################################################################################
+        # Dump the address map
+        root.saveAddressMap( "addressMapDump.dump" )
+        root.saveAddressMap( "addressMapDump.h", headerEn=True )
+
         ######################
         # Development PyDM GUI
         ######################
