@@ -144,6 +144,10 @@ if __name__ == "__main__":
             clDevTarget = clDevTarget,
         ) as root:
 
+        # Dump the address map
+        root.saveAddressMap( "addressMapDump.dump" )
+        root.saveAddressMap( "addressMapDump.h", headerEn=True )
+
         ######################
         # Development PyDM GUI
         ######################
