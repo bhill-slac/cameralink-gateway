@@ -78,7 +78,6 @@ ClinkDevRoot:
             Config_L0Select_DestSel: 0x8000
             Pipeline_Depth_Clks: 20000
             Pipeline_Depth_Fids: 100
-            PartitionMessage_Insert: 0x0
             PartitionMessage_Hdr: 0x0
         ######################################      
         TriggerEventManager:
