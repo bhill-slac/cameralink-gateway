@@ -213,7 +213,7 @@ class ClinkDevRoot(shared.Root):
 
             # Check for PCIe FW version
             fwVersion = self.ClinkPcie.AxiPcieCore.AxiVersion.FpgaVersion.get()
-            if (fwVersion != self.FwVersionLock):
+            if (0 and fwVersion != self.FwVersion):
                 errMsg = f"""
                     PCIe.AxiVersion.FpgaVersion = {fwVersion:#04x} != {self.FwVersionLock:#04x}
                     Please update PCIe firmware using software/scripts/updatePcieFpga.py
@@ -229,7 +229,7 @@ class ClinkDevRoot(shared.Root):
                 if (self.ClinkPcie.Hsio.PgpMon[lane].RxRemLinkReady.get() != 0):
                     # Check for FW version
                     fwVersion = self.ClinkFeb[lane].AxiVersion.FpgaVersion.get()
-                    if (fwVersion != self.FwVersionLock):
+                    if (0 and fwVersion != self.FwVersion):
                         errMsg = f"""
                             Fpga[lane={lane}].AxiVersion.FpgaVersion = {fwVersion:#04x} != {self.FwVersionLock:#04x}
                             Please update Fpga[{lane}] at Lane={lane} firmware using software/scripts/updateFeb.py
