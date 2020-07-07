@@ -1,7 +1,6 @@
-SaveConfig file after running
-command ConfigTpgMiniStream.
+SaveConfig file after boot.
 Entries w/ more than one value vary depending on
-prior state before running the command.
+prior state before rebooting.
 ClinkDevRoot:
   enable: True
   ForceWrite: False

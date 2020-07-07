@@ -1,3 +1,7 @@
+SaveConfig file after running
+command ConfigXpmMiniStream and then StartRun.
+Entries w/ more than one value vary depending on
+prior state before running the command.
 ClinkDevRoot:
   enable: True
   ForceWrite: False
