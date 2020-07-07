@@ -1,5 +1,6 @@
 SaveConfig file after running
-command ConfigXpmMiniStream and then StartRun.
+command ConfigXpmMiniStream, then StartRun, then enabling
+Hsio.TimingRx.XpmMiniWrapper.XpmMini.Config_L0Select_Enabled: True
 Entries w/ more than one value vary depending on
 prior state before running the command.
 ClinkDevRoot:
