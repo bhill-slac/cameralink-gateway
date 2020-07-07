@@ -77,11 +77,11 @@ ClinkDevRoot:
         TimingFrameRx:
           enable: True
           RxPolarity: 0x0
-          ClkSel: LCLS-I Clock
-          RxDown: 0x1
+          ClkSel: LCLS-II Clock
+          RxDown: 0x0
           BypassRst: 0x0
           RxPllReset: 0x0
-          ModeSel: Lcls1Protocol
+          ModeSel: Lcls2Protocol
           ModeSelEn: UseClkSel
           MsgDelay: 0x0
         XpmMiniWrapper:
@@ -136,9 +136,9 @@ ClinkDevRoot:
             AxilRdEn: True
             Link: 0
             Loopback: False
-            HwEnable: False or True
-            Config_L0Select_Enabled: False or True
-            Config_L0Select_RateSel: 10Hz, 100 Hz
+            HwEnable: False
+            Config_L0Select_Enabled: True
+            Config_L0Select_RateSel: 100 Hz
             Config_L0Select_DestSel: 0x8000
             Pipeline_Depth_Clks: 20000
             Pipeline_Depth_Fids: 100
@@ -168,7 +168,7 @@ ClinkDevRoot:
             TxId: 0x0
           TriggerEventBuffer[0]:
             enable: True
-            MasterEnable: False
+            MasterEnable: False or True
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
