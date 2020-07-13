@@ -36,8 +36,8 @@ addressMapDump.h
 
 # Only .bit.gz and .mcs.gz should be committed to git
 *.bit
-*.mcs
-*.gz
+#*.mcs
+#*.gz
 *.ltx
 *.dcp
 *.xsa
