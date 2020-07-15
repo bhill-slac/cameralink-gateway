@@ -27,7 +27,7 @@ import l2si_core              as l2si
 # https://jira.slac.stanford.edu/browse/ESROGUE-459
 ###################################################
 rogue.Version.minVersion('4.11.1')
-rogue.Version.maxVersion('4.999.999')
+rogue.Version.maxVersion('999.999.999')
 # rogue.Version.exactVersion('4.11.1')
 
 class ClinkDevRoot(shared.Root):
