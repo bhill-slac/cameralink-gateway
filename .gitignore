@@ -32,7 +32,6 @@ net_log.txt
 # Vivado Build
 build*
 release*
-addressMapDump.h
 
 # Only .bit.gz and .mcs.gz should be committed to git
 *.bit
