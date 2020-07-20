@@ -79,6 +79,9 @@ class ClinkDevRoot(shared.Root):
             numLanes    = laneSize,
             **kwargs)
 
+        # Unhide the RemoteVariableDump command
+        self.RemoteVariableDump.hidden = False
+
         # Create memory interface
         self.memMap = axipcie.createAxiPcieMemMap(dev, 'localhost', 8000)
 
