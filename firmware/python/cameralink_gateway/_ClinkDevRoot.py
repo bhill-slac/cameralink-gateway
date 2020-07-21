@@ -231,6 +231,7 @@ class ClinkDevRoot(shared.Root):
 
             # Dump the state of the hardware before configuration
             self.ReadAll()
+            self.remoteVariableDump('dump/regdump-pre-config.txt', True, False );
             self.SaveState('dump/state-dump-pre-config.yml')
 
             # Check for PCIe FW version
@@ -320,8 +321,9 @@ class ClinkDevRoot(shared.Root):
             print(f'Loading {defaultFile} Configuration File...')
             self.LoadConfig(defaultFile)
 
-            # Dump the state of the hardware before configuration
+            # Dump the state of the hardware after configuration
             self.ReadAll()
+            self.remoteVariableDump('dump/regdump-post-config.txt', True, False );
             self.SaveState('dump/state-dump-post-config.yml')
 
     # Function calls after loading YAML configuration
