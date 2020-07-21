@@ -34,7 +34,7 @@ class ClinkDevSlacPgpCardG4(pr.Device):
         self.add(clDev.Application(
             offset   = 0x00C0_0000,
             numLanes = numLanes,
-            expand   = False,
+            expand   = True,
         ))
 
         # Hardware Layer
