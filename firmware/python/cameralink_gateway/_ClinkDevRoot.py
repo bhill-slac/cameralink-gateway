@@ -246,6 +246,7 @@ class ClinkDevRoot(shared.Root):
                 print(f'Dumping pre-configurations...')
                 self.SaveConfig('dump/config-dump-pre-config.yml')
                 self.SaveState('dump/state-dump-pre-config.yml')
+                self.remoteVariableDump('dump/regdump-pre-config.txt', True, False );
                 # Dump the address map
                 self.saveAddressMap( "dump/addressMapDump.dump" )
                 self.saveAddressMap( "dump/addressMapDump.h", headerEn=True )
@@ -354,6 +355,7 @@ class ClinkDevRoot(shared.Root):
             print(f'Dumping post-configurations...')
             self.SaveConfig('dump/config-dump-post-config.yml')
             self.SaveState('dump/state-dump-post-config.yml')
+            self.remoteVariableDump('dump/regdump-post-config.txt', True, False );
 
     # Function calls after loading YAML configuration
     def initialize(self):
