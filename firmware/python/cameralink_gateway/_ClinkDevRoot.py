@@ -73,8 +73,9 @@ class ClinkDevRoot(shared.Root):
             initRead    = initRead,
             **kwargs)
 
-        # Unhide the RemoteVariableDump command
+        # Unhide RemoteVariableDump and other useful commands
         self.RemoteVariableDump.hidden = False
+        self.DumpCfgVars.hidden = False
 
         # Create memory interface
         self.memMap = axipcie.createAxiPcieMemMap(dev, 'localhost', 8000)
