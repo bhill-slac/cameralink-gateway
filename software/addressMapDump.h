@@ -577,7 +577,7 @@
      "ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.RemoteTrigCnt[0]	UInt16	0x920088	0x88	RO	[0]	[16]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_3	ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.RemoteTrigCnt[0]	0x4	|"\
      "ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.LocalTrigDropCnt[0]	UInt16	0x920090	0x90	RO	[0]	[16]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_3	ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.LocalTrigDropCnt[0]	0x4	|"\
      "ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.RemoteTrigDropCnt[0]	UInt16	0x920098	0x98	RO	[0]	[16]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_3	ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.RemoteTrigDropCnt[0]	0x4	|"\
-     "ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.CntRst	UInt32	0x9200fc	0xfc	WO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_3	ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.CntRst	0x4	Counter Reset|"\
+     "ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.CntRst	UInt1	0x9200fc	0xfc	WO	[0]	[1]	None	None	None	False	False	2	False	False	0	False	True	Unnamed_3	ClinkDevRoot.ClinkPcie.Hsio.TimingRx.TimingPhyMonitor.CntRst	0x4	Counter Reset|"\
      "ClinkDevRoot.ClinkFeb[0].AxiVersion.FpgaVersion	UInt32	0x0	0x0	RO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].AxiVersion.FpgaVersion	0x4	FPGA Firmware Version Number|"\
      "ClinkDevRoot.ClinkFeb[0].AxiVersion.ScratchPad	UInt32	0x4	0x4	RW	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].AxiVersion.ScratchPad	0x4	Register to test reads and writes|"\
      "ClinkDevRoot.ClinkFeb[0].AxiVersion.UpTimeCnt	UInt32	0x8	0x8	RO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].AxiVersion.UpTimeCnt	0x4	Number of seconds since last reset|"\
@@ -720,7 +720,7 @@ Deca: Refer to section /\"2.2.3 Camera Link 80 bit/\" CameraLink spec V2.0, page
      "ClinkDevRoot.ClinkFeb[0].ClinkTop.Ch[0].FrameMode	UInt2	0x100108	0x8	RW	[0]	[2]	None	None	{0: 'None', 1: 'Line', 2: 'Frame'}	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].ClinkTop.Ch[0].FrameMode	0x4	\
 None: Disables output\
 Line: 1D camera\
-Frame\" 2D pixel array\
+Frame: 2D pixel array\
 |"\
      "ClinkDevRoot.ClinkFeb[0].ClinkTop.Ch[0].TapCount	UInt4	0x10010c	0xc	RW	[0]	[4]	0	10	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].ClinkTop.Ch[0].TapCount	0x4	# of video output taps on the Camera Link Interface (# of individual data value channels)|"\
      "ClinkDevRoot.ClinkFeb[0].ClinkTop.Ch[0].DataEn	Bool	0x100110	0x10	RW	[0]	[1]	None	None	{False: 'False', True: 'True'}	False	True	4	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].ClinkTop.Ch[0].DataEn	0x4	Data enable.  When 0x0 causes reset on ClinkData's FSM module|"\
@@ -1577,7 +1577,7 @@ These bits must all be set High when performing DRP.\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].TrigMask	UInt4	0x200010	0x10	RW	[0]	[4]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].TrigMask	0x4	Sets the trigger mask on the 4-bit camCtrl bus|"\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].TrigRate	UInt32	0x2000f4	0xf4	RO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].TrigRate	0x4	Trigger Rate|"\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].TrigCnt	UInt32	0x2000f8	0xf8	RO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].TrigCnt	0x4	Trigger Counter|"\
-     "ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].CntRst	UInt32	0x2000fc	0xfc	WO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].CntRst	0x4	Counter Reset|"\
+     "ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].CntRst	UInt1	0x2000fc	0xfc	WO	[0]	[1]	None	None	None	False	False	2	False	False	0	False	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[0].CntRst	0x4	Counter Reset|"\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].EnableTrig	Bool	0x200100	0x0	RW	[0]	[1]	None	None	{False: 'False', True: 'True'}	False	True	4	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].EnableTrig	0x4	Enable triggering|"\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].InvCC	Bool	0x200104	0x4	RW	[0]	[1]	None	None	{False: 'False', True: 'True'}	False	True	4	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].InvCC	0x4	Inverter the 4-bit camCtrl bus|"\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigMap	UInt1	0x200108	0x8	RW	[0]	[1]	None	None	{0: 'ChA', 1: 'ChB'}	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigMap	0x4	0x0: map trigger to channel A, 0x1: map trigger to channel B|"\
@@ -1585,7 +1585,7 @@ These bits must all be set High when performing DRP.\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigMask	UInt4	0x200110	0x10	RW	[0]	[4]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigMask	0x4	Sets the trigger mask on the 4-bit camCtrl bus|"\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigRate	UInt32	0x2001f4	0xf4	RO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigRate	0x4	Trigger Rate|"\
      "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigCnt	UInt32	0x2001f8	0xf8	RO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].TrigCnt	0x4	Trigger Counter|"\
-     "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].CntRst	UInt32	0x2001fc	0xfc	WO	[0]	[32]	None	None	None	False	True	2	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].CntRst	0x4	Counter Reset|"\
+     "ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].CntRst	UInt1	0x2001fc	0xfc	WO	[0]	[1]	None	None	None	False	False	2	False	False	0	False	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].TrigCtrl[1].CntRst	0x4	Counter Reset|"\
      "ClinkDevRoot.ClinkFeb[0].PgpMon[0].RxPhyReady	Bool	0x400020	0x20	RO	[0]	[1]	None	None	{False: 'False', True: 'True'}	False	True	4	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].PgpMon[0].RxPhyReady	0x4	RX Phy is Ready|"\
      "ClinkDevRoot.ClinkFeb[0].PgpMon[0].TxPhyReady	Bool	0x400020	0x20	RO	[1]	[1]	None	None	{False: 'False', True: 'True'}	False	True	4	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].PgpMon[0].RxPhyReady	0x4	TX Phy is Ready|"\
      "ClinkDevRoot.ClinkFeb[0].PgpMon[0].RxLocalLinkReady	Bool	0x400020	0x20	RO	[2]	[1]	None	None	{False: 'False', True: 'True'}	False	True	4	False	False	0	True	True	Unnamed_78	ClinkDevRoot.ClinkFeb[0].PgpMon[0].RxPhyReady	0x4	Rx Local Link Ready|"\
