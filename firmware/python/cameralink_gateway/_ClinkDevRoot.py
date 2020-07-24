@@ -205,6 +205,7 @@ class ClinkDevRoot(shared.Root):
             # Arm for data/trigger stream
             for devPtr in eventBuilder:
                 devPtr.Blowoff.set(False)
+                devPtr.SoftRst()
 
             # Turn on the triggering
             for devPtr in trigger:
