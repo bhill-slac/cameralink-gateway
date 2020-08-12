@@ -4,6 +4,7 @@ python scripts/devGui \
 	--defaultFile config/Opal1000.yml \
 	--startupMode False \
 	--standAloneMode False \
+	--enableDump  True \
 	--enLclsI  True \
 	--enLclsII True \
 	--guiType PyDM &
