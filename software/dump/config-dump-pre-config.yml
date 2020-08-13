@@ -43,28 +43,28 @@ ClinkDevRoot:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
       AppLane[1]:
         enable: True
         EventBuilder:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
       AppLane[2]:
         enable: True
         EventBuilder:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
       AppLane[3]:
         enable: True
         EventBuilder:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
     Hsio:
       enable: True
       PgpMon[0]:
@@ -244,8 +244,8 @@ ClinkDevRoot:
             Link: 0
             Loopback: False
             HwEnable: False
-            Config_L0Select_Enabled: True
-            Config_L0Select_RateSel: 100 Hz
+            Config_L0Select_Enabled: False
+            Config_L0Select_RateSel: 929 kHz
             Config_L0Select_DestSel: 0x8000
             Pipeline_Depth_Clks: 20000
             Pipeline_Depth_Fids: 100
@@ -323,25 +323,25 @@ ClinkDevRoot:
             TxId: 0x0
           TriggerEventBuffer[0]:
             enable: True
-            MasterEnable: True
+            MasterEnable: False
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
           TriggerEventBuffer[1]:
             enable: True
-            MasterEnable: True
+            MasterEnable: False
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
           TriggerEventBuffer[2]:
             enable: True
-            MasterEnable: True
+            MasterEnable: False
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
           TriggerEventBuffer[3]:
             enable: True
-            MasterEnable: True
+            MasterEnable: False
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
@@ -658,8 +658,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
+      TrigPulseWidthRaw: 0x3d08f
+      TrigPulseWidth: 2000.000
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
@@ -982,8 +982,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
+      TrigPulseWidthRaw: 0x0
+      TrigPulseWidth: 0.008
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
@@ -1306,8 +1306,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
+      TrigPulseWidthRaw: 0x0
+      TrigPulseWidth: 0.008
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
@@ -1630,8 +1630,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
+      TrigPulseWidthRaw: 0x0
+      TrigPulseWidth: 0.008
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
