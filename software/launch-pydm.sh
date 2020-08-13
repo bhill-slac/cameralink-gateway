@@ -7,4 +7,4 @@ python scripts/devGui \
 	--enableDump  True \
 	--enLclsI  True \
 	--enLclsII True \
-	--guiType PyDM &
+	--guiType PyDM 
