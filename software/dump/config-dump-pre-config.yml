@@ -244,8 +244,8 @@ ClinkDevRoot:
             Link: 0
             Loopback: False
             HwEnable: False
-            Config_L0Select_Enabled: False
-            Config_L0Select_RateSel: 929 kHz
+            Config_L0Select_Enabled: True
+            Config_L0Select_RateSel: 100 Hz
             Config_L0Select_DestSel: 0x8000
             Pipeline_Depth_Clks: 20000
             Pipeline_Depth_Fids: 100
@@ -658,8 +658,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x3d08f
-      TrigPulseWidth: 2000.000
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
@@ -982,8 +982,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x0
-      TrigPulseWidth: 0.008
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
@@ -1306,8 +1306,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x0
-      TrigPulseWidth: 0.008
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
@@ -1630,8 +1630,8 @@ ClinkDevRoot:
       EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x0
-      TrigPulseWidth: 0.008
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
