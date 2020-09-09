@@ -5,7 +5,7 @@ ClinkDevRoot:
   SystemLog: *id001
   ForceWrite: False
   InitAfterConfig: True
-  Time: &id002 1597303581.1271462
+  Time: &id002 1597811177.5074034
   LocalTime: *id002
   PollEn: *id002
   ClinkPcie:
@@ -56,8 +56,8 @@ ClinkDevRoot:
         enable: True
         FpgaVersion: 0x4090000
         ScratchPad: 0x000000
-        UpTimeCnt: 803135
-        UpTime: 9 days, 7:05:35
+        UpTimeCnt: 1310745
+        UpTime: 15 days, 4:05:45
         FpgaReloadHalt: 0x0
         FpgaReloadAddress: 0x0
         UserReset: 0x0
@@ -95,7 +95,7 @@ ClinkDevRoot:
         AXI_PCIE_CONFIG_C_DATA_BYTES_C: 32
         AXI_PCIE_CONFIG_C_ID_BITS_C: 4
         AXI_PCIE_CONFIG_C_LEN_BITS_C: 8
-        AppClkFreq: 156244749
+        AppClkFreq: 156244754
       DmaIbAxisMon:
         enable: True
         AXIS_CONFIG_G_TDATA_BYTES_C: 8
@@ -108,60 +108,60 @@ ClinkDevRoot:
         COMMON_CLK_G: True
         Ch[0]:
           enable: True
-          FrameCnt: 0x2d8
-          FrameRate: 196
+          FrameCnt: 0x2d2
+          FrameRate: 452
           FrameRateMax: 452
-          FrameRateMin: 82
-          RawBandwidth: 0x168c
+          FrameRateMin: 270
+          RawBandwidth: 0x161c
           Bandwidth: 0.0
-          RawBandwidthMax: 0x34f8
+          RawBandwidthMax: 0x34c0
           BandwidthMax: 0.1
-          RawBandwidthMin: 0x168c
+          RawBandwidthMin: 0x161c
           BandwidthMin: 0.0
           FrameSize: 28
           FrameSizeMax: 280
           FrameSizeMin: 28
         Ch[1]:
           enable: True
-          FrameCnt: 0x2d6
-          FrameRate: 196
+          FrameCnt: 0x2d2
+          FrameRate: 452
           FrameRateMax: 452
-          FrameRateMin: 196
-          RawBandwidth: 0x168c
+          FrameRateMin: 270
+          RawBandwidth: 0x161c
           Bandwidth: 0.0
           RawBandwidthMax: 0x34c0
           BandwidthMax: 0.1
-          RawBandwidthMin: 0x168c
+          RawBandwidthMin: 0x161c
           BandwidthMin: 0.0
           FrameSize: 28
           FrameSizeMax: 280
           FrameSizeMin: 28
         Ch[2]:
           enable: True
-          FrameCnt: 0x2d6
-          FrameRate: 198
-          FrameRateMax: 544
-          FrameRateMin: 198
-          RawBandwidth: 0x168c
+          FrameCnt: 0x2d2
+          FrameRate: 452
+          FrameRateMax: 452
+          FrameRateMin: 270
+          RawBandwidth: 0x1654
           Bandwidth: 0.0
           RawBandwidthMax: 0x34c0
           BandwidthMax: 0.1
-          RawBandwidthMin: 0x168c
+          RawBandwidthMin: 0x1654
           BandwidthMin: 0.0
           FrameSize: 28
           FrameSizeMax: 280
           FrameSizeMin: 28
         Ch[3]:
           enable: True
-          FrameCnt: 0x307
-          FrameRate: 200
-          FrameRateMax: 594
-          FrameRateMin: 200
-          RawBandwidth: 0x168c
+          FrameCnt: 0x303
+          FrameRate: 452
+          FrameRateMax: 603
+          FrameRateMin: 452
+          RawBandwidth: 0x1670
           Bandwidth: 0.0
           RawBandwidthMax: 0x3a1c
           BandwidthMax: 0.1
-          RawBandwidthMin: 0x168c
+          RawBandwidthMin: 0x1670
           BandwidthMin: 0.0
           FrameSize: 28
           FrameSizeMax: 280
@@ -178,60 +178,60 @@ ClinkDevRoot:
         COMMON_CLK_G: True
         Ch[0]:
           enable: True
-          FrameCnt: 0x2da
-          FrameRate: 196
+          FrameCnt: 0x2d4
+          FrameRate: 452
           FrameRateMax: 452
-          FrameRateMin: 80
-          RawBandwidth: 0xf50
+          FrameRateMin: 272
+          RawBandwidth: 0xf00
           Bandwidth: 0.0
-          RawBandwidthMax: 0x2498
+          RawBandwidthMax: 0x2470
           BandwidthMax: 0.1
-          RawBandwidthMin: 0xf50
+          RawBandwidthMin: 0xf00
           BandwidthMin: 0.0
           FrameSize: 20
           FrameSizeMax: 24
           FrameSizeMin: 20
         Ch[1]:
           enable: True
-          FrameCnt: 0x2d8
-          FrameRate: 196
+          FrameCnt: 0x2d4
+          FrameRate: 452
           FrameRateMax: 452
-          FrameRateMin: 196
-          RawBandwidth: 0xf50
+          FrameRateMin: 272
+          RawBandwidth: 0xf00
           Bandwidth: 0.0
           RawBandwidthMax: 0x2470
           BandwidthMax: 0.1
-          RawBandwidthMin: 0xf50
+          RawBandwidthMin: 0xf00
           BandwidthMin: 0.0
           FrameSize: 20
           FrameSizeMax: 24
           FrameSizeMin: 20
         Ch[2]:
           enable: True
-          FrameCnt: 0x2d8
-          FrameRate: 198
-          FrameRateMax: 545
-          FrameRateMin: 198
-          RawBandwidth: 0xf50
+          FrameCnt: 0x2d4
+          FrameRate: 452
+          FrameRateMax: 452
+          FrameRateMin: 272
+          RawBandwidth: 0xf28
           Bandwidth: 0.0
           RawBandwidthMax: 0x2470
           BandwidthMax: 0.1
-          RawBandwidthMin: 0xf50
+          RawBandwidthMin: 0xf28
           BandwidthMin: 0.0
           FrameSize: 20
           FrameSizeMax: 24
           FrameSizeMin: 20
         Ch[3]:
           enable: True
-          FrameCnt: 0x309
-          FrameRate: 200
-          FrameRateMax: 594
-          FrameRateMin: 200
-          RawBandwidth: 0xf50
+          FrameCnt: 0x305
+          FrameRate: 452
+          FrameRateMax: 607
+          FrameRateMin: 452
+          RawBandwidth: 0xf3c
           Bandwidth: 0.0
           RawBandwidthMax: 0x2844
           BandwidthMax: 0.1
-          RawBandwidthMin: 0xf50
+          RawBandwidthMin: 0xf3c
           BandwidthMin: 0.0
           FrameSize: 20
           FrameSizeMax: 24
@@ -337,19 +337,19 @@ ClinkDevRoot:
         RxRemOverflow2Count: 0
         RxRemOverflow3Count: 0
         RxFrameErrorCount: 0
-        RxFrameCount: 726
+        RxFrameCount: 722
         TxLocOverflow0Count: 0
         TxLocOverflow1Count: 0
         TxLocOverflow2Count: 0
         TxLocOverflow3Count: 0
         TxFrameErrorCount: 0
-        TxFrameCount: 728
+        TxFrameCount: 724
         RxRemLinkReadyCount: 0
-        LastTxOpCode: 0x14
+        LastTxOpCode: 0xb
         LastRxOpCode: 0xfb
         TxOpCodeCount: 0
         RxOpCodeCount: 0
-        RxClkFreqRaw: 0x9502a7c
+        RxClkFreqRaw: 0x9502a18
         TxClkFreqRaw: 0x9502ff4
         RxClkFreq: 156.25
         TxClkFreq: 156.25
@@ -365,15 +365,15 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x2d8
-          FrameRate: 264
-          FrameRateMax: 272
-          FrameRateMin: 260
-          RawBandwidth: 0xf50
+          FrameCnt: 0x2d4
+          FrameRate: 192
+          FrameRateMax: 452
+          FrameRateMin: 80
+          RawBandwidth: 0xf00
           Bandwidth: 0.0
           RawBandwidthMax: 0x2470
           BandwidthMax: 0.1
-          RawBandwidthMin: 0xf50
+          RawBandwidthMin: 0xf00
           BandwidthMin: 0.0
           FrameSize: 20
           FrameSizeMax: 24
@@ -435,15 +435,15 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x2d6
-          FrameRate: 196
-          FrameRateMax: 462
-          FrameRateMin: 68
-          RawBandwidth: 0x168c
+          FrameCnt: 0x2d2
+          FrameRate: 192
+          FrameRateMax: 452
+          FrameRateMin: 78
+          RawBandwidth: 0x161c
           Bandwidth: 0.0
           RawBandwidthMax: 0x34c0
           BandwidthMax: 0.1
-          RawBandwidthMin: 0x168c
+          RawBandwidthMin: 0x161c
           BandwidthMin: 0.0
           FrameSize: 28
           FrameSizeMax: 280
@@ -452,7 +452,7 @@ ClinkDevRoot:
           enable: True
           FrameCnt: 0x0
           FrameRate: 0
-          FrameRateMax: 0
+          FrameRateMax: 100
           FrameRateMin: 0
           RawBandwidth: 0x0
           Bandwidth: 0.0
@@ -467,7 +467,7 @@ ClinkDevRoot:
           enable: True
           FrameCnt: 0x0
           FrameRate: 0
-          FrameRateMax: 5
+          FrameRateMax: 0
           FrameRateMin: 0
           RawBandwidth: 0x0
           Bandwidth: 0.0
@@ -518,19 +518,19 @@ ClinkDevRoot:
         RxRemOverflow2Count: 0
         RxRemOverflow3Count: 0
         RxFrameErrorCount: 0
-        RxFrameCount: 726
+        RxFrameCount: 722
         TxLocOverflow0Count: 0
         TxLocOverflow1Count: 0
         TxLocOverflow2Count: 0
         TxLocOverflow3Count: 0
         TxFrameErrorCount: 0
-        TxFrameCount: 728
+        TxFrameCount: 724
         RxRemLinkReadyCount: 0
-        LastTxOpCode: 0x14
+        LastTxOpCode: 0xb
         LastRxOpCode: 0x0
         TxOpCodeCount: 0
         RxOpCodeCount: 0
-        RxClkFreqRaw: 0x9502e64
+        RxClkFreqRaw: 0x9502ec8
         TxClkFreqRaw: 0x9502ff4
         RxClkFreq: 156.25
         TxClkFreq: 156.25
@@ -546,15 +546,15 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x2d8
-          FrameRate: 264
-          FrameRateMax: 272
-          FrameRateMin: 260
-          RawBandwidth: 0xf50
+          FrameCnt: 0x2d4
+          FrameRate: 193
+          FrameRateMax: 452
+          FrameRateMin: 193
+          RawBandwidth: 0xf00
           Bandwidth: 0.0
           RawBandwidthMax: 0x2470
           BandwidthMax: 0.1
-          RawBandwidthMin: 0xf50
+          RawBandwidthMin: 0xf00
           BandwidthMin: 0.0
           FrameSize: 20
           FrameSizeMax: 24
@@ -616,15 +616,15 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x2d6
-          FrameRate: 452
-          FrameRateMax: 452
-          FrameRateMin: 270
-          RawBandwidth: 0x168c
+          FrameCnt: 0x2d2
+          FrameRate: 193
+          FrameRateMax: 459
+          FrameRateMin: 193
+          RawBandwidth: 0x161c
           Bandwidth: 0.0
           RawBandwidthMax: 0x34c0
           BandwidthMax: 0.1
-          RawBandwidthMin: 0x168c
+          RawBandwidthMin: 0x161c
           BandwidthMin: 0.0
           FrameSize: 28
           FrameSizeMax: 280
@@ -633,7 +633,7 @@ ClinkDevRoot:
           enable: True
           FrameCnt: 0x0
           FrameRate: 0
-          FrameRateMax: 0
+          FrameRateMax: 71
           FrameRateMin: 0
           RawBandwidth: 0x0
           Bandwidth: 0.0
@@ -699,15 +699,15 @@ ClinkDevRoot:
         RxRemOverflow2Count: 0
         RxRemOverflow3Count: 0
         RxFrameErrorCount: 0
-        RxFrameCount: 726
+        RxFrameCount: 722
         TxLocOverflow0Count: 0
         TxLocOverflow1Count: 0
         TxLocOverflow2Count: 0
         TxLocOverflow3Count: 0
         TxFrameErrorCount: 0
-        TxFrameCount: 728
+        TxFrameCount: 724
         RxRemLinkReadyCount: 0
-        LastTxOpCode: 0x15
+        LastTxOpCode: 0xb
         LastRxOpCode: 0x0
         TxOpCodeCount: 0
         RxOpCodeCount: 0
@@ -727,15 +727,15 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x2d8
-          FrameRate: 264
-          FrameRateMax: 633
-          FrameRateMin: 260
-          RawBandwidth: 0xf50
+          FrameCnt: 0x2d4
+          FrameRate: 194
+          FrameRateMax: 545
+          FrameRateMin: 194
+          RawBandwidth: 0xf28
           Bandwidth: 0.0
           RawBandwidthMax: 0x2470
           BandwidthMax: 0.1
-          RawBandwidthMin: 0xf50
+          RawBandwidthMin: 0xf28
           BandwidthMin: 0.0
           FrameSize: 20
           FrameSizeMax: 24
@@ -797,15 +797,15 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x2d6
-          FrameRate: 356
-          FrameRateMax: 563
-          FrameRateMin: 356
-          RawBandwidth: 0x168c
+          FrameCnt: 0x2d2
+          FrameRate: 452
+          FrameRateMax: 452
+          FrameRateMin: 270
+          RawBandwidth: 0x1654
           Bandwidth: 0.0
           RawBandwidthMax: 0x34c0
           BandwidthMax: 0.1
-          RawBandwidthMin: 0x168c
+          RawBandwidthMin: 0x1654
           BandwidthMin: 0.0
           FrameSize: 28
           FrameSizeMax: 280
@@ -814,7 +814,7 @@ ClinkDevRoot:
           enable: True
           FrameCnt: 0x0
           FrameRate: 0
-          FrameRateMax: 0
+          FrameRateMax: 31
           FrameRateMin: 0
           RawBandwidth: 0x0
           Bandwidth: 0.0
@@ -880,19 +880,19 @@ ClinkDevRoot:
         RxRemOverflow2Count: 0
         RxRemOverflow3Count: 0
         RxFrameErrorCount: 0
-        RxFrameCount: 775
+        RxFrameCount: 771
         TxLocOverflow0Count: 0
         TxLocOverflow1Count: 0
         TxLocOverflow2Count: 0
         TxLocOverflow3Count: 0
         TxFrameErrorCount: 0
-        TxFrameCount: 777
+        TxFrameCount: 773
         RxRemLinkReadyCount: 0
-        LastTxOpCode: 0x15
+        LastTxOpCode: 0xc
         LastRxOpCode: 0x0
         TxOpCodeCount: 0
         RxOpCodeCount: 0
-        RxClkFreqRaw: 0x9502d38
+        RxClkFreqRaw: 0x9502cd4
         TxClkFreqRaw: 0x9502ff4
         RxClkFreq: 156.25
         TxClkFreq: 156.25
@@ -908,10 +908,10 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x309
-          FrameRate: 264
-          FrameRateMax: 737
-          FrameRateMin: 260
+          FrameCnt: 0x305
+          FrameRate: 196
+          FrameRateMax: 544
+          FrameRateMin: 196
           RawBandwidth: 0xf50
           Bandwidth: 0.0
           RawBandwidthMax: 0x2844
@@ -978,13 +978,13 @@ ClinkDevRoot:
         COMMON_CLK_G: False
         Ch[0]:
           enable: True
-          FrameCnt: 0x307
-          FrameRate: 197
-          FrameRateMax: 531
-          FrameRateMin: 197
+          FrameCnt: 0x302
+          FrameRate: 260
+          FrameRateMax: 733
+          FrameRateMin: 260
           RawBandwidth: 0x168c
           Bandwidth: 0.0
-          RawBandwidthMax: 0x3a1c
+          RawBandwidthMax: 0x3a00
           BandwidthMax: 0.1
           RawBandwidthMin: 0x168c
           BandwidthMin: 0.0
@@ -995,7 +995,7 @@ ClinkDevRoot:
           enable: True
           FrameCnt: 0x0
           FrameRate: 0
-          FrameRateMax: 0
+          FrameRateMax: 44
           FrameRateMin: 0
           RawBandwidth: 0x0
           Bandwidth: 0.0
@@ -1010,7 +1010,7 @@ ClinkDevRoot:
           enable: True
           FrameCnt: 0x0
           FrameRate: 0
-          FrameRateMax: 5
+          FrameRateMax: 0
           FrameRateMin: 0
           RawBandwidth: 0x0
           Bandwidth: 0.0
@@ -1040,11 +1040,11 @@ ClinkDevRoot:
         enable: True
         GthRxAlignCheck[0]:
           enable: True
-          PhaseCount[0]: 0xc69999b2
-          PhaseCount[1]: 0x8f7c96b0
-          PhaseCount[2]: 0xb3bb96a4
-          PhaseCount[3]: 0xb8a6bb7a
-          PhaseCount[4]: 0x9ac1ecef
+          PhaseCount[0]: 0xc79a9ab3
+          PhaseCount[1]: 0x908097b2
+          PhaseCount[2]: 0xb9d699a9
+          PhaseCount[3]: 0xbfbedd8b
+          PhaseCount[4]: 0x9aed152a
           PhaseCount[5]: 0x0
           PhaseCount[6]: 0x0
           PhaseCount[7]: 0x0
@@ -1106,18 +1106,18 @@ ClinkDevRoot:
           PhaseCount[63]: 0x0
           PhaseTarget: 0x10
           ResetLen: 0x3
-          LastPhase: 0x11
+          LastPhase: 0x10
           TxClkFreqRaw: 0x717cbc1
           TxClkFreq: 119.000
-          RxClkFreqRaw: 0x717ce35
+          RxClkFreqRaw: 0x717ce3c
           RxClkFreq: 119.001
         GthRxAlignCheck[1]:
           enable: True
-          PhaseCount[0]: 0xf132ee88
-          PhaseCount[1]: 0x418b39a6
-          PhaseCount[2]: 0xb6af2ca4
-          PhaseCount[3]: 0xc952cf9b
-          PhaseCount[4]: 0x6166f576
+          PhaseCount[0]: 0xdd4bab9e
+          PhaseCount[1]: 0xe37d2134
+          PhaseCount[2]: 0x945bdc1d
+          PhaseCount[3]: 0xdfde8d05
+          PhaseCount[4]: 0xba0ec9d7
           PhaseCount[5]: 0x0
           PhaseCount[6]: 0x0
           PhaseCount[7]: 0x0
@@ -1179,18 +1179,18 @@ ClinkDevRoot:
           PhaseCount[63]: 0x0
           PhaseTarget: 0x10
           ResetLen: 0x3
-          LastPhase: 0x11
-          TxClkFreqRaw: 0xb11c66f
+          LastPhase: 0x10
+          TxClkFreqRaw: 0xb11c66e
           TxClkFreq: 185.714
-          RxClkFreqRaw: 0xa95d2f6
-          RxClkFreq: 177.591
+          RxClkFreqRaw: 0xa922cee
+          RxClkFreq: 177.352
         TimingFrameRx:
           enable: True
-          sofCount: 0x365
-          eofCount: 0x365
-          FidCount: 0x365
+          sofCount: 0x359
+          eofCount: 0x359
+          FidCount: 0x359
           CrcErrCount: 0x0
-          RxClkCount: 0x111cc61
+          RxClkCount: 0x10e0377
           RxRstCount: 0x0
           RxDecErrCount: 0x0
           RxDspErrCount: 0x0
@@ -1203,8 +1203,8 @@ ClinkDevRoot:
           ModeSel: Lcls1Protocol
           ModeSelEn: UseClkSel
           MsgDelay: 0x0
-          TxClkCount: 0x111cdc2
-          BypassDoneCount: 0x79
+          TxClkCount: 0x10e04b7
+          BypassDoneCount: 0x164
           BypassResetCount: 0x0
         XpmMiniWrapper:
           enable: True
@@ -1215,10 +1215,10 @@ ClinkDevRoot:
             TxInhibit: 0x0
             BaseControl: 0xc8
             PulseIdWr: 0x0
-            PulseIdRd: 0x6f457c6b61
+            PulseIdRd: 0xb3f6e655aa
             PulseIdSet: 0x0
             TStampWr: 0x0
-            TStampRd: 0x7d99b34331ccc
+            TStampRd: 0xc452321d955a3
             TStampSet: 0x0
             FixedRateDiv[0]: 0x1
             FixedRateDiv[1]: 0xd
@@ -1261,10 +1261,10 @@ ClinkDevRoot:
             BsaAvgToWr[0]: 0x64
             BsaMaxSeverity[0]: Invalid
             PllCnt: 0x0
-            ClkCnt: 0x2bf70ddc
+            ClkCnt: 0x2a674851
             SyncErrCnt: 0x0
             CountInterval: 0x488b
-            BaseRateCount: 0x5c
+            BaseRateCount: 0x5d
           XpmMini:
             enable: True
             AxilRdEn: True
@@ -1278,15 +1278,15 @@ ClinkDevRoot:
             RxReady: False
             RxIsXpm: False
             RxId: 0x0
-            RxRcvCnts: 0xbc401307
+            RxRcvCnts: 0x617aed76
             Config_L0Select_Enabled: True
             Config_L0Select_RateSel: 100 Hz
             Config_L0Select_DestSel: 0x8000
-            Status_L0Select_Enabled: 177398523277
+            Status_L0Select_Enabled: 254814913764
             Status_L0Select_Inhibited: 0
-            Status_L0Select_Num: 169532372
+            Status_L0Select_Num: 811114278
             Status_L0Select_NumInh: 0
-            Status_L0Select_NumAcc: 169532372
+            Status_L0Select_NumAcc: 811114278
             Pipeline_Depth_Clks: 20000
             Pipeline_Depth_Fids: 100
             PartitionMessage_Hdr: 0x0
@@ -1301,7 +1301,7 @@ ClinkDevRoot:
               RateSel: 0x28
               DestType: All
               DestSel: 0x0
-              Count: 0x2e8
+              Count: 0x2ce
             EvrV2ChannelReg[1]:
               enable: True
               EnableReg: True
@@ -1309,7 +1309,7 @@ ClinkDevRoot:
               RateSel: 0x28
               DestType: All
               DestSel: 0x0
-              Count: 0x2e8
+              Count: 0x2ce
             EvrV2ChannelReg[2]:
               enable: True
               EnableReg: True
@@ -1317,7 +1317,7 @@ ClinkDevRoot:
               RateSel: 0x28
               DestType: All
               DestSel: 0x0
-              Count: 0x2e8
+              Count: 0x2ce
             EvrV2ChannelReg[3]:
               enable: True
               EnableReg: True
@@ -1325,7 +1325,7 @@ ClinkDevRoot:
               RateSel: 0x28
               DestType: All
               DestSel: 0x0
-              Count: 0x2e8
+              Count: 0x2ce
             EvrV2TriggerReg[0]:
               enable: True
               EnableTrig: True
@@ -1381,7 +1381,7 @@ ClinkDevRoot:
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
-            XpmOverflow: False
+            XpmOverflow: True
             XpmPause: False
             FifoOverflow: False
             FifoPause: False
@@ -1402,7 +1402,7 @@ ClinkDevRoot:
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
-            XpmOverflow: False
+            XpmOverflow: True
             XpmPause: False
             FifoOverflow: False
             FifoPause: False
@@ -1423,7 +1423,7 @@ ClinkDevRoot:
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
-            XpmOverflow: False
+            XpmOverflow: True
             XpmPause: False
             FifoOverflow: False
             FifoPause: False
@@ -1444,7 +1444,7 @@ ClinkDevRoot:
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
-            XpmOverflow: False
+            XpmOverflow: True
             XpmPause: False
             FifoOverflow: False
             FifoPause: False
@@ -1466,10 +1466,10 @@ ClinkDevRoot:
           UseMiniTpg: False
           TxRstStatus: 0x0
           RxRstStatus: 0x0
-          RefClkFreq[0]: 238000002
+          RefClkFreq[0]: 238000001
           RefClkFreq[1]: 371428574
-          TxClkFreq: 119000001
-          RxClkFreq: 119000629
+          TxClkFreq: 119000000
+          RxClkFreq: 119000636
           LocalTrigRate[0]: 0
           LocalTrigRate[1]: 0
           LocalTrigRate[2]: 0
@@ -1508,8 +1508,8 @@ ClinkDevRoot:
       enable: True
       FpgaVersion: 0x4090000
       ScratchPad: 0x000000
-      UpTimeCnt: 489
-      UpTime: 0:08:09
+      UpTimeCnt: 41
+      UpTime: 0:00:41
       FpgaReloadHalt: 0x0
       FpgaReloadAddress: 0x0
       UserReset: 0x0
@@ -1533,12 +1533,12 @@ ClinkDevRoot:
       enable: True
     Xadc:
       enable: True
-      RawTemperature: 0xac2
-      Temperature: 65.704
-      RawMaxTemperature: 0xac5
-      MaxTemperature: 66.073
-      RawMinTemperature: 0xabe
-      MinTemperature: 65.212
+      RawTemperature: 0xac6
+      Temperature: 66.196
+      RawMaxTemperature: 0xac6
+      MaxTemperature: 66.196
+      RawMinTemperature: 0xabf
+      MinTemperature: 65.335
       OverTemperatureAlarm: False
       UserTemperatureAlarm: False
       RawVccInt: 0x548
@@ -1548,12 +1548,12 @@ ClinkDevRoot:
       RawMinVccInt: 0x547
       MinVccInt: 0.989
       VccIntAlarm: False
-      RawVccAux: 0x999
+      RawVccAux: 0x99a
       VccAux: 1.799
-      RawMaxVccAux: 0x99c
-      MaxVccAux: 1.801
-      RawMinVccAux: 0x997
-      MinVccAux: 1.797
+      RawMaxVccAux: 0x99b
+      MaxVccAux: 1.800
+      RawMinVccAux: 0x998
+      MinVccAux: 1.798
       VccAuxAlarm: False
       RawVccBram: 0x548
       VccBram: 0.990
@@ -1564,8 +1564,8 @@ ClinkDevRoot:
       VccBramAlarm: False
       RawVin: 0x3
       Vin: 0.002
-      RawVrefp: 0x6ab
-      Vrefp: 1.250
+      RawVrefp: 0x6a9
+      Vrefp: 1.248
       RawVrefn: 0xfff
       Vrefn: 2.998
       SupplyOffsetA: 0xffd
@@ -1592,10 +1592,10 @@ ClinkDevRoot:
       DelayA: 0xf
       DelayB: 0x0
       DelayC: 0x0
-      ClkInFreq[0]: 80000493
+      ClkInFreq[0]: 80000481
       ClkInFreq[1]: 0
       ClkInFreq[2]: 0
-      ClinkClkFreq[0]: 0
+      ClinkClkFreq[0]: 80000481
       ClinkClkFreq[1]: 0
       ClinkClkFreq[2]: 0
       Ch[0]:
@@ -1934,16 +1934,16 @@ ClinkDevRoot:
       RxRemOverflow2Count: 0
       RxRemOverflow3Count: 0
       RxFrameErrorCount: 0
-      RxFrameCount: 105
+      RxFrameCount: 101
       TxLocOverflow0Count: 0
       TxLocOverflow1Count: 0
       TxLocOverflow2Count: 0
       TxLocOverflow3Count: 0
       TxFrameErrorCount: 0
-      TxFrameCount: 111
+      TxFrameCount: 107
       RxRemLinkReadyCount: 0
       LastTxOpCode: 0x0
-      LastRxOpCode: 0x14
+      LastRxOpCode: 0xb
       TxOpCodeCount: 0
       RxOpCodeCount: 0
       RxClkFreqRaw: 0x9502ff4
@@ -1952,7 +1952,7 @@ ClinkDevRoot:
       TxClkFreq: 156.25
     PgpMon[1]:
       enable: True
-      RxPhyReady: True
+      RxPhyReady: False
       TxPhyReady: True
       RxLocalLinkReady: False
       RxRemLinkReady: False
@@ -1993,8 +1993,8 @@ ClinkDevRoot:
       enable: True
       FpgaVersion: 0x4090000
       ScratchPad: 0x000000
-      UpTimeCnt: 489
-      UpTime: 0:08:09
+      UpTimeCnt: 38
+      UpTime: 0:00:38
       FpgaReloadHalt: 0x0
       FpgaReloadAddress: 0x0
       UserReset: 0x0
@@ -2018,12 +2018,12 @@ ClinkDevRoot:
       enable: True
     Xadc:
       enable: True
-      RawTemperature: 0xae9
-      Temperature: 70.503
-      RawMaxTemperature: 0xaec
-      MaxTemperature: 70.872
-      RawMinTemperature: 0xae4
-      MinTemperature: 69.888
+      RawTemperature: 0xaee
+      Temperature: 71.118
+      RawMaxTemperature: 0xaf0
+      MaxTemperature: 71.364
+      RawMinTemperature: 0xae9
+      MinTemperature: 70.503
       OverTemperatureAlarm: False
       UserTemperatureAlarm: False
       RawVccInt: 0x54e
@@ -2035,22 +2035,22 @@ ClinkDevRoot:
       VccIntAlarm: False
       RawVccAux: 0x9a3
       VccAux: 1.806
-      RawMaxVccAux: 0x9a4
+      RawMaxVccAux: 0x9a5
       MaxVccAux: 1.807
-      RawMinVccAux: 0x9a1
-      MinVccAux: 1.804
+      RawMinVccAux: 0x9a2
+      MinVccAux: 1.805
       VccAuxAlarm: False
       RawVccBram: 0x54e
       VccBram: 0.994
-      RawMaxVccBram: 0x550
-      MaxVccBram: 0.996
+      RawMaxVccBram: 0x54f
+      MaxVccBram: 0.995
       RawMinVccBram: 0x54c
       MinVccBram: 0.993
       VccBramAlarm: False
       RawVin: 0x2
       Vin: 0.001
-      RawVrefp: 0x6a9
-      Vrefp: 1.248
+      RawVrefp: 0x6aa
+      Vrefp: 1.249
       RawVrefn: 0xfff
       Vrefn: 2.998
       SupplyOffsetA: 0xfff
@@ -2077,10 +2077,10 @@ ClinkDevRoot:
       DelayA: 0x10
       DelayB: 0x0
       DelayC: 0x0
-      ClkInFreq[0]: 79998334
+      ClkInFreq[0]: 79998315
       ClkInFreq[1]: 0
       ClkInFreq[2]: 0
-      ClinkClkFreq[0]: 0
+      ClinkClkFreq[0]: 79998316
       ClinkClkFreq[1]: 0
       ClinkClkFreq[2]: 0
       Ch[0]:
@@ -2419,20 +2419,20 @@ ClinkDevRoot:
       RxRemOverflow2Count: 0
       RxRemOverflow3Count: 0
       RxFrameErrorCount: 0
-      RxFrameCount: 105
+      RxFrameCount: 101
       TxLocOverflow0Count: 0
       TxLocOverflow1Count: 0
       TxLocOverflow2Count: 0
       TxLocOverflow3Count: 0
       TxFrameErrorCount: 0
-      TxFrameCount: 111
+      TxFrameCount: 107
       RxRemLinkReadyCount: 0
       LastTxOpCode: 0x0
-      LastRxOpCode: 0x14
+      LastRxOpCode: 0xb
       TxOpCodeCount: 0
       RxOpCodeCount: 0
-      RxClkFreqRaw: 0x9503058
-      TxClkFreqRaw: 0x9503058
+      RxClkFreqRaw: 0x9502ff4
+      TxClkFreqRaw: 0x9502ff4
       RxClkFreq: 156.25
       TxClkFreq: 156.25
     PgpMon[1]:
@@ -2468,8 +2468,8 @@ ClinkDevRoot:
       LastRxOpCode: 0x0
       TxOpCodeCount: 0
       RxOpCodeCount: 0
-      RxClkFreqRaw: 0x9503058
-      TxClkFreqRaw: 0x9503058
+      RxClkFreqRaw: 0x9502ff4
+      TxClkFreqRaw: 0x9502ff4
       RxClkFreq: 156.25
       TxClkFreq: 156.25
   ClinkFeb[2]:
@@ -2478,8 +2478,8 @@ ClinkDevRoot:
       enable: True
       FpgaVersion: 0x4090000
       ScratchPad: 0x000000
-      UpTimeCnt: 489
-      UpTime: 0:08:09
+      UpTimeCnt: 35
+      UpTime: 0:00:35
       FpgaReloadHalt: 0x0
       FpgaReloadAddress: 0x0
       UserReset: 0x0
@@ -2503,12 +2503,12 @@ ClinkDevRoot:
       enable: True
     Xadc:
       enable: True
-      RawTemperature: 0xaf5
-      Temperature: 71.979
-      RawMaxTemperature: 0xaf7
-      MaxTemperature: 72.225
-      RawMinTemperature: 0xaef
-      MinTemperature: 71.241
+      RawTemperature: 0xafa
+      Temperature: 72.595
+      RawMaxTemperature: 0xafb
+      MaxTemperature: 72.718
+      RawMinTemperature: 0xaf3
+      MinTemperature: 71.733
       OverTemperatureAlarm: False
       UserTemperatureAlarm: False
       RawVccInt: 0x54e
@@ -2518,9 +2518,9 @@ ClinkDevRoot:
       RawMinVccInt: 0x54d
       MinVccInt: 0.993
       VccIntAlarm: False
-      RawVccAux: 0x986
-      VccAux: 1.785
-      RawMaxVccAux: 0x987
+      RawVccAux: 0x985
+      VccAux: 1.784
+      RawMaxVccAux: 0x986
       MaxVccAux: 1.785
       RawMinVccAux: 0x983
       MinVccAux: 1.782
@@ -2536,10 +2536,10 @@ ClinkDevRoot:
       Vin: 0.002
       RawVrefp: 0x6a7
       Vrefp: 1.247
-      RawVrefn: 0x0
-      Vrefn: 0.000
+      RawVrefn: 0xfff
+      Vrefn: 2.998
       SupplyOffsetA: 0xff2
-      AdcOffsetA: 0xff3
+      AdcOffsetA: 0xff2
       AdcGainA: 0x7
       JTGD: False
       JTGR: False
@@ -2562,10 +2562,10 @@ ClinkDevRoot:
       DelayA: 0x11
       DelayB: 0x0
       DelayC: 0x0
-      ClkInFreq[0]: 79999979
+      ClkInFreq[0]: 79999983
       ClkInFreq[1]: 0
       ClkInFreq[2]: 0
-      ClinkClkFreq[0]: 0
+      ClinkClkFreq[0]: 79999983
       ClinkClkFreq[1]: 0
       ClinkClkFreq[2]: 0
       Ch[0]:
@@ -2904,16 +2904,16 @@ ClinkDevRoot:
       RxRemOverflow2Count: 0
       RxRemOverflow3Count: 0
       RxFrameErrorCount: 0
-      RxFrameCount: 105
+      RxFrameCount: 101
       TxLocOverflow0Count: 0
       TxLocOverflow1Count: 0
       TxLocOverflow2Count: 0
       TxLocOverflow3Count: 0
       TxFrameErrorCount: 0
-      TxFrameCount: 111
+      TxFrameCount: 107
       RxRemLinkReadyCount: 0
       LastTxOpCode: 0x0
-      LastRxOpCode: 0x15
+      LastRxOpCode: 0xb
       TxOpCodeCount: 0
       RxOpCodeCount: 0
       RxClkFreqRaw: 0x9502ff4
@@ -2963,8 +2963,8 @@ ClinkDevRoot:
       enable: True
       FpgaVersion: 0x4090000
       ScratchPad: 0x000000
-      UpTimeCnt: 489
-      UpTime: 0:08:09
+      UpTimeCnt: 31
+      UpTime: 0:00:31
       FpgaReloadHalt: 0x0
       FpgaReloadAddress: 0x0
       UserReset: 0x0
@@ -2988,25 +2988,25 @@ ClinkDevRoot:
       enable: True
     Xadc:
       enable: True
-      RawTemperature: 0xb0a
-      Temperature: 74.563
-      RawMaxTemperature: 0xb0b
-      MaxTemperature: 74.686
-      RawMinTemperature: 0xb03
-      MinTemperature: 73.702
+      RawTemperature: 0xb10
+      Temperature: 75.301
+      RawMaxTemperature: 0xb10
+      MaxTemperature: 75.301
+      RawMinTemperature: 0xb08
+      MinTemperature: 74.317
       OverTemperatureAlarm: False
       UserTemperatureAlarm: False
       RawVccInt: 0x549
       VccInt: 0.990
-      RawMaxVccInt: 0x549
-      MaxVccInt: 0.990
+      RawMaxVccInt: 0x54a
+      MaxVccInt: 0.991
       RawMinVccInt: 0x548
       MinVccInt: 0.990
       VccIntAlarm: False
       RawVccAux: 0x98c
       VccAux: 1.789
-      RawMaxVccAux: 0x98d
-      MaxVccAux: 1.790
+      RawMaxVccAux: 0x98c
+      MaxVccAux: 1.789
       RawMinVccAux: 0x98a
       MinVccAux: 1.788
       VccAuxAlarm: False
@@ -3017,12 +3017,12 @@ ClinkDevRoot:
       RawMinVccBram: 0x548
       MinVccBram: 0.990
       VccBramAlarm: False
-      RawVin: 0x2
-      Vin: 0.001
-      RawVrefp: 0x6a8
-      Vrefp: 1.247
-      RawVrefn: 0x0
-      Vrefn: 0.000
+      RawVin: 0x3
+      Vin: 0.002
+      RawVrefp: 0x6a6
+      Vrefp: 1.246
+      RawVrefn: 0xfff
+      Vrefn: 2.998
       SupplyOffsetA: 0xffe
       AdcOffsetA: 0xffd
       AdcGainA: 0x7
@@ -3047,10 +3047,10 @@ ClinkDevRoot:
       DelayA: 0xf
       DelayB: 0x0
       DelayC: 0x0
-      ClkInFreq[0]: 79998352
+      ClkInFreq[0]: 79998382
       ClkInFreq[1]: 0
       ClkInFreq[2]: 0
-      ClinkClkFreq[0]: 0
+      ClinkClkFreq[0]: 79998382
       ClinkClkFreq[1]: 0
       ClinkClkFreq[2]: 0
       Ch[0]:
@@ -3389,16 +3389,16 @@ ClinkDevRoot:
       RxRemOverflow2Count: 0
       RxRemOverflow3Count: 0
       RxFrameErrorCount: 0
-      RxFrameCount: 152
+      RxFrameCount: 148
       TxLocOverflow0Count: 0
       TxLocOverflow1Count: 0
       TxLocOverflow2Count: 0
       TxLocOverflow3Count: 0
       TxFrameErrorCount: 0
-      TxFrameCount: 158
+      TxFrameCount: 154
       RxRemLinkReadyCount: 0
       LastTxOpCode: 0x0
-      LastRxOpCode: 0x15
+      LastRxOpCode: 0xc
       TxOpCodeCount: 0
       RxOpCodeCount: 0
       RxClkFreqRaw: 0x9502ff4
