@@ -101,11 +101,18 @@ ClinkDevRoot:
             ###################
             EvrV2TriggerReg[:]:
               EnableTrig: True
-              Source: 0x0
               Polarity: Rising
               ComplEn: Disabled
               ComplAnd: LogicOR
               Delay: 0x0
               Width: 0x1
+            EvrV2TriggerReg[0]:
+              Source: 0x0
+            EvrV2TriggerReg[1]:
+              Source: 0x1
+            EvrV2TriggerReg[2]:
+              Source: 0x2
+            EvrV2TriggerReg[3]:
+              Source: 0x3
             ###################
     #########################################################################################################
