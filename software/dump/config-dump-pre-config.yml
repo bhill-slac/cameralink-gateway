@@ -43,28 +43,28 @@ ClinkDevRoot:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
       AppLane[1]:
         enable: True
         EventBuilder:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
       AppLane[2]:
         enable: True
         EventBuilder:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
       AppLane[3]:
         enable: True
         EventBuilder:
           enable: True
           Bypass: 0x0
           Timeout: 0x0
-          Blowoff: False
+          Blowoff: True
     Hsio:
       enable: True
       PgpMon[0]:
@@ -185,7 +185,7 @@ ClinkDevRoot:
           enable: True
           RxPolarity: 0x0
           ClkSel: LCLS-I Clock
-          RxDown: 0x1
+          RxDown: 0x0
           BypassRst: 0x0
           RxPllReset: 0x0
           ModeSel: Lcls1Protocol
@@ -244,8 +244,8 @@ ClinkDevRoot:
             Link: 0
             Loopback: False
             HwEnable: False
-            Config_L0Select_Enabled: True
-            Config_L0Select_RateSel: 100 Hz
+            Config_L0Select_Enabled: False
+            Config_L0Select_RateSel: 929 kHz
             Config_L0Select_DestSel: 0x8000
             Pipeline_Depth_Clks: 20000
             Pipeline_Depth_Fids: 100
@@ -294,7 +294,7 @@ ClinkDevRoot:
             EvrV2TriggerReg[1]:
               enable: True
               EnableTrig: True
-              Source: 0x0
+              Source: 0x1
               Polarity: Rising
               ComplEn: Disabled
               ComplAnd: LogicOR
@@ -303,7 +303,7 @@ ClinkDevRoot:
             EvrV2TriggerReg[2]:
               enable: True
               EnableTrig: True
-              Source: 0x0
+              Source: 0x2
               Polarity: Rising
               ComplEn: Disabled
               ComplAnd: LogicOR
@@ -312,7 +312,7 @@ ClinkDevRoot:
             EvrV2TriggerReg[3]:
               enable: True
               EnableTrig: True
-              Source: 0x0
+              Source: 0x3
               Polarity: Rising
               ComplEn: Disabled
               ComplAnd: LogicOR
@@ -350,34 +350,34 @@ ClinkDevRoot:
           Loopback: 'No'
           UseMiniTpg: False
   ClinkFeb[0]:
-    enable: True
+    enable: ExtDepFalse
     AxiVersion:
-      enable: True
+      enable: ParentFalse
       ScratchPad: 0x000000
       FpgaReloadHalt: 0x0
       FpgaReloadAddress: 0x0
       UserReset: 0x0
     CypressS25Fl:
-      enable: True
+      enable: ParentFalse
     Xadc:
-      enable: True
+      enable: ParentFalse
     ClinkTop:
-      enable: True
+      enable: ParentFalse
       RstPll: 0x0
       Ch[0]:
-        enable: True
+        enable: ParentFalse
         LinkMode: Disable
         DataMode: None
         FrameMode: None
         TapCount: 0x0
         DataEn: False
         Blowoff: False
-        SerThrottle: 10000
+        SerThrottle: 0
         BaudRate: 57600
         SwControlValue: 0x0
         SwControlEn: 0x0
         UartOpal1000:
-          enable: True
+          enable: ParentFalse
           ID: ''
           BS: ''
           CCE[0]: ''
@@ -405,43 +405,43 @@ ClinkDevRoot:
           OVL: ''
           FSP: ''
       Ch[1]:
-        enable: True
+        enable: ParentFalse
         LinkMode: Disable
         DataMode: None
         FrameMode: None
         TapCount: 0x0
         DataEn: False
         Blowoff: False
-        SerThrottle: 10000
+        SerThrottle: 0
         BaudRate: 9600
         SwControlValue: 0x0
         SwControlEn: 0x0
       Pll[0]:
-        enable: True
+        enable: ParentFalse
         PHASE_MUX[0]: 0x0
-        HIGH_TIME[0]: 0x7
-        LOW_TIME[0]: 0x7
+        HIGH_TIME[0]: 0x0
+        LOW_TIME[0]: 0x0
         PHASE_MUX[1]: 0x0
-        HIGH_TIME[1]: 0x1
-        LOW_TIME[1]: 0x1
+        HIGH_TIME[1]: 0x0
+        LOW_TIME[1]: 0x0
         PHASE_MUX[2]: 0x0
-        HIGH_TIME[2]: 0x1
-        LOW_TIME[2]: 0x1
+        HIGH_TIME[2]: 0x0
+        LOW_TIME[2]: 0x0
         PHASE_MUX[3]: 0x0
-        HIGH_TIME[3]: 0x1
-        LOW_TIME[3]: 0x1
+        HIGH_TIME[3]: 0x0
+        LOW_TIME[3]: 0x0
         PHASE_MUX[4]: 0x0
-        HIGH_TIME[4]: 0x1
-        LOW_TIME[4]: 0x1
+        HIGH_TIME[4]: 0x0
+        LOW_TIME[4]: 0x0
         PHASE_MUX[5]: 0x0
-        HIGH_TIME[5]: 0x1
-        LOW_TIME[5]: 0x1
+        HIGH_TIME[5]: 0x0
+        LOW_TIME[5]: 0x0
         PHASE_MUX[6]: 0x0
-        HIGH_TIME[6]: 0x1
-        LOW_TIME[6]: 0x1
+        HIGH_TIME[6]: 0x0
+        LOW_TIME[6]: 0x0
         PHASE_MUX_FB: 0x0
-        HIGH_TIME_FB: 0x7
-        LOW_TIME_FB: 0x7
+        HIGH_TIME_FB: 0x0
+        LOW_TIME_FB: 0x0
         FRAC[0]: 0x0
         FRAC_EN[0]: 0x0
         FRAC_WF_R[0]: 0x0
@@ -455,27 +455,27 @@ ClinkDevRoot:
         DELAY_TIME[1]: 0x0
         MX[2]: 0x0
         EDGE[2]: 0x0
-        NO_COUNT[2]: 0x1
+        NO_COUNT[2]: 0x0
         DELAY_TIME[2]: 0x0
         MX[3]: 0x0
         EDGE[3]: 0x0
-        NO_COUNT[3]: 0x1
+        NO_COUNT[3]: 0x0
         DELAY_TIME[3]: 0x0
         MX[4]: 0x0
         EDGE[4]: 0x0
-        NO_COUNT[4]: 0x1
+        NO_COUNT[4]: 0x0
         DELAY_TIME[4]: 0x0
         PHASE_MUX_F_CLKOUT[0]: 0x0
         FRAC_WF_F_CLKOUT[0]: 0x0
         MX[5]: 0x0
         EDGE[5]: 0x0
-        NO_COUNT[5]: 0x1
+        NO_COUNT[5]: 0x0
         DELAY_TIME[5]: 0x0
         PHASE_MUX_F_CLKOUT_FB: 0x0
         FRAC_WF_F_CLKOUT_FB: 0x0
         MX[6]: 0x0
         EDGE[6]: 0x0
-        NO_COUNT[6]: 0x1
+        NO_COUNT[6]: 0x0
         DELAY_TIME[6]: 0x0
         FRAC_FB: 0x0
         FRAC_EN_FB: 0x0
@@ -485,41 +485,41 @@ ClinkDevRoot:
         NO_COUNT_FB: 0x0
         DELAY_TIME_FB: 0x0
         EDGE_DIV: 0x0
-        NO_COUNT_DIV: 0x1
-        HIGH_TIME_DIV: 0x1
-        LOW_TIME_DIV: 0x1
-        LockReg[0]: 0x2bc
-        LockReg[1]: 0x7c01
-        LockReg[2]: 0xffe9
-        FiltReg[0]: 0x9908
-        FiltReg[1]: 0x8100
+        NO_COUNT_DIV: 0x0
+        HIGH_TIME_DIV: 0x0
+        LOW_TIME_DIV: 0x0
+        LockReg[0]: 0x0
+        LockReg[1]: 0x0
+        LockReg[2]: 0x0
+        FiltReg[0]: 0x0
+        FiltReg[1]: 0x0
         POWER: 0xffff
       Pll[1]:
-        enable: True
+        enable: ParentFalse
         PHASE_MUX[0]: 0x0
-        HIGH_TIME[0]: 0x7
-        LOW_TIME[0]: 0x7
+        HIGH_TIME[0]: 0x0
+        LOW_TIME[0]: 0x0
         PHASE_MUX[1]: 0x0
-        HIGH_TIME[1]: 0x1
-        LOW_TIME[1]: 0x1
+        HIGH_TIME[1]: 0x0
+        LOW_TIME[1]: 0x0
         PHASE_MUX[2]: 0x0
-        HIGH_TIME[2]: 0x1
-        LOW_TIME[2]: 0x1
+        HIGH_TIME[2]: 0x0
+        LOW_TIME[2]: 0x0
         PHASE_MUX[3]: 0x0
-        HIGH_TIME[3]: 0x1
-        LOW_TIME[3]: 0x1
+        HIGH_TIME[3]: 0x0
+        LOW_TIME[3]: 0x0
         PHASE_MUX[4]: 0x0
-        HIGH_TIME[4]: 0x1
-        LOW_TIME[4]: 0x1
+        HIGH_TIME[4]: 0x0
+        LOW_TIME[4]: 0x0
         PHASE_MUX[5]: 0x0
-        HIGH_TIME[5]: 0x1
-        LOW_TIME[5]: 0x1
+        HIGH_TIME[5]: 0x0
+        LOW_TIME[5]: 0x0
         PHASE_MUX[6]: 0x0
-        HIGH_TIME[6]: 0x1
-        LOW_TIME[6]: 0x1
+        HIGH_TIME[6]: 0x0
+        LOW_TIME[6]: 0x0
         PHASE_MUX_FB: 0x0
-        HIGH_TIME_FB: 0x7
-        LOW_TIME_FB: 0x7
+        HIGH_TIME_FB: 0x0
+        LOW_TIME_FB: 0x0
         FRAC[0]: 0x0
         FRAC_EN[0]: 0x0
         FRAC_WF_R[0]: 0x0
@@ -533,27 +533,27 @@ ClinkDevRoot:
         DELAY_TIME[1]: 0x0
         MX[2]: 0x0
         EDGE[2]: 0x0
-        NO_COUNT[2]: 0x1
+        NO_COUNT[2]: 0x0
         DELAY_TIME[2]: 0x0
         MX[3]: 0x0
         EDGE[3]: 0x0
-        NO_COUNT[3]: 0x1
+        NO_COUNT[3]: 0x0
         DELAY_TIME[3]: 0x0
         MX[4]: 0x0
         EDGE[4]: 0x0
-        NO_COUNT[4]: 0x1
+        NO_COUNT[4]: 0x0
         DELAY_TIME[4]: 0x0
         PHASE_MUX_F_CLKOUT[0]: 0x0
         FRAC_WF_F_CLKOUT[0]: 0x0
         MX[5]: 0x0
         EDGE[5]: 0x0
-        NO_COUNT[5]: 0x1
+        NO_COUNT[5]: 0x0
         DELAY_TIME[5]: 0x0
         PHASE_MUX_F_CLKOUT_FB: 0x0
         FRAC_WF_F_CLKOUT_FB: 0x0
         MX[6]: 0x0
         EDGE[6]: 0x0
-        NO_COUNT[6]: 0x1
+        NO_COUNT[6]: 0x0
         DELAY_TIME[6]: 0x0
         FRAC_FB: 0x0
         FRAC_EN_FB: 0x0
@@ -563,41 +563,41 @@ ClinkDevRoot:
         NO_COUNT_FB: 0x0
         DELAY_TIME_FB: 0x0
         EDGE_DIV: 0x0
-        NO_COUNT_DIV: 0x1
-        HIGH_TIME_DIV: 0x1
-        LOW_TIME_DIV: 0x1
-        LockReg[0]: 0x2bc
-        LockReg[1]: 0x7c01
-        LockReg[2]: 0xffe9
-        FiltReg[0]: 0x9908
-        FiltReg[1]: 0x8100
+        NO_COUNT_DIV: 0x0
+        HIGH_TIME_DIV: 0x0
+        LOW_TIME_DIV: 0x0
+        LockReg[0]: 0x0
+        LockReg[1]: 0x0
+        LockReg[2]: 0x0
+        FiltReg[0]: 0x0
+        FiltReg[1]: 0x0
         POWER: 0xffff
       Pll[2]:
-        enable: True
+        enable: ParentFalse
         PHASE_MUX[0]: 0x0
-        HIGH_TIME[0]: 0x7
-        LOW_TIME[0]: 0x7
+        HIGH_TIME[0]: 0x0
+        LOW_TIME[0]: 0x0
         PHASE_MUX[1]: 0x0
-        HIGH_TIME[1]: 0x1
-        LOW_TIME[1]: 0x1
+        HIGH_TIME[1]: 0x0
+        LOW_TIME[1]: 0x0
         PHASE_MUX[2]: 0x0
-        HIGH_TIME[2]: 0x1
-        LOW_TIME[2]: 0x1
+        HIGH_TIME[2]: 0x0
+        LOW_TIME[2]: 0x0
         PHASE_MUX[3]: 0x0
-        HIGH_TIME[3]: 0x1
-        LOW_TIME[3]: 0x1
+        HIGH_TIME[3]: 0x0
+        LOW_TIME[3]: 0x0
         PHASE_MUX[4]: 0x0
-        HIGH_TIME[4]: 0x1
-        LOW_TIME[4]: 0x1
+        HIGH_TIME[4]: 0x0
+        LOW_TIME[4]: 0x0
         PHASE_MUX[5]: 0x0
-        HIGH_TIME[5]: 0x1
-        LOW_TIME[5]: 0x1
+        HIGH_TIME[5]: 0x0
+        LOW_TIME[5]: 0x0
         PHASE_MUX[6]: 0x0
-        HIGH_TIME[6]: 0x1
-        LOW_TIME[6]: 0x1
+        HIGH_TIME[6]: 0x0
+        LOW_TIME[6]: 0x0
         PHASE_MUX_FB: 0x0
-        HIGH_TIME_FB: 0x7
-        LOW_TIME_FB: 0x7
+        HIGH_TIME_FB: 0x0
+        LOW_TIME_FB: 0x0
         FRAC[0]: 0x0
         FRAC_EN[0]: 0x0
         FRAC_WF_R[0]: 0x0
@@ -611,27 +611,27 @@ ClinkDevRoot:
         DELAY_TIME[1]: 0x0
         MX[2]: 0x0
         EDGE[2]: 0x0
-        NO_COUNT[2]: 0x1
+        NO_COUNT[2]: 0x0
         DELAY_TIME[2]: 0x0
         MX[3]: 0x0
         EDGE[3]: 0x0
-        NO_COUNT[3]: 0x1
+        NO_COUNT[3]: 0x0
         DELAY_TIME[3]: 0x0
         MX[4]: 0x0
         EDGE[4]: 0x0
-        NO_COUNT[4]: 0x1
+        NO_COUNT[4]: 0x0
         DELAY_TIME[4]: 0x0
         PHASE_MUX_F_CLKOUT[0]: 0x0
         FRAC_WF_F_CLKOUT[0]: 0x0
         MX[5]: 0x0
         EDGE[5]: 0x0
-        NO_COUNT[5]: 0x1
+        NO_COUNT[5]: 0x0
         DELAY_TIME[5]: 0x0
         PHASE_MUX_F_CLKOUT_FB: 0x0
         FRAC_WF_F_CLKOUT_FB: 0x0
         MX[6]: 0x0
         EDGE[6]: 0x0
-        NO_COUNT[6]: 0x1
+        NO_COUNT[6]: 0x0
         DELAY_TIME[6]: 0x0
         FRAC_FB: 0x0
         FRAC_EN_FB: 0x0
@@ -641,38 +641,38 @@ ClinkDevRoot:
         NO_COUNT_FB: 0x0
         DELAY_TIME_FB: 0x0
         EDGE_DIV: 0x0
-        NO_COUNT_DIV: 0x1
-        HIGH_TIME_DIV: 0x1
-        LOW_TIME_DIV: 0x1
-        LockReg[0]: 0x2bc
-        LockReg[1]: 0x7c01
-        LockReg[2]: 0xffe9
-        FiltReg[0]: 0x9908
-        FiltReg[1]: 0x8100
+        NO_COUNT_DIV: 0x0
+        HIGH_TIME_DIV: 0x0
+        LOW_TIME_DIV: 0x0
+        LockReg[0]: 0x0
+        LockReg[1]: 0x0
+        LockReg[2]: 0x0
+        FiltReg[0]: 0x0
+        FiltReg[1]: 0x0
         POWER: 0xffff
       PllConfig[0]: ''
       PllConfig[1]: ''
       PllConfig[2]: ''
     TrigCtrl[0]:
-      enable: True
+      enable: ParentFalse
       EnableTrig: False
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
-      TrigMask: 0x1
+      TrigPulseWidthRaw: 0x0
+      TrigPulseWidth: 0.008
+      TrigMask: 0x0
     TrigCtrl[1]:
-      enable: True
+      enable: ParentFalse
       EnableTrig: False
       InvCC: False
-      TrigMap: ChB
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
-      TrigMask: 0x1
+      TrigMap: ChA
+      TrigPulseWidthRaw: 0x0
+      TrigPulseWidth: 0.008
+      TrigMask: 0x0
     PgpMon[0]:
-      enable: True
+      enable: ParentFalse
     PgpMon[1]:
-      enable: True
+      enable: ParentFalse
   ClinkFeb[1]:
     enable: True
     AxiVersion:
@@ -690,11 +690,11 @@ ClinkDevRoot:
       RstPll: 0x0
       Ch[0]:
         enable: True
-        LinkMode: Disable
-        DataMode: None
-        FrameMode: None
-        TapCount: 0x0
-        DataEn: False
+        LinkMode: Base
+        DataMode: 12Bit
+        FrameMode: Frame
+        TapCount: 0x2
+        DataEn: True
         Blowoff: False
         SerThrottle: 10000
         BaudRate: 57600
@@ -730,11 +730,11 @@ ClinkDevRoot:
           FSP: ''
       Ch[1]:
         enable: True
-        LinkMode: Disable
-        DataMode: None
-        FrameMode: None
-        TapCount: 0x0
-        DataEn: False
+        LinkMode: Base
+        DataMode: 12Bit
+        FrameMode: Frame
+        TapCount: 0x2
+        DataEn: True
         Blowoff: False
         SerThrottle: 10000
         BaudRate: 9600
@@ -979,15 +979,15 @@ ClinkDevRoot:
       PllConfig[2]: ''
     TrigCtrl[0]:
       enable: True
-      EnableTrig: False
+      EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
+      TrigPulseWidthRaw: 0x1e847
+      TrigPulseWidth: 1000.000
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
-      EnableTrig: False
+      EnableTrig: True
       InvCC: False
       TrigMap: ChB
       TrigPulseWidthRaw: 0xfff
@@ -1014,11 +1014,11 @@ ClinkDevRoot:
       RstPll: 0x0
       Ch[0]:
         enable: True
-        LinkMode: Disable
-        DataMode: None
-        FrameMode: None
-        TapCount: 0x0
-        DataEn: False
+        LinkMode: Base
+        DataMode: 12Bit
+        FrameMode: Frame
+        TapCount: 0x2
+        DataEn: True
         Blowoff: False
         SerThrottle: 10000
         BaudRate: 57600
@@ -1054,11 +1054,11 @@ ClinkDevRoot:
           FSP: ''
       Ch[1]:
         enable: True
-        LinkMode: Disable
-        DataMode: None
-        FrameMode: None
-        TapCount: 0x0
-        DataEn: False
+        LinkMode: Base
+        DataMode: 12Bit
+        FrameMode: Frame
+        TapCount: 0x2
+        DataEn: True
         Blowoff: False
         SerThrottle: 10000
         BaudRate: 9600
@@ -1303,15 +1303,15 @@ ClinkDevRoot:
       PllConfig[2]: ''
     TrigCtrl[0]:
       enable: True
-      EnableTrig: False
+      EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
+      TrigPulseWidthRaw: 0x1e847
+      TrigPulseWidth: 1000.000
       TrigMask: 0x1
     TrigCtrl[1]:
       enable: True
-      EnableTrig: False
+      EnableTrig: True
       InvCC: False
       TrigMap: ChB
       TrigPulseWidthRaw: 0xfff
@@ -1322,34 +1322,34 @@ ClinkDevRoot:
     PgpMon[1]:
       enable: True
   ClinkFeb[3]:
-    enable: True
+    enable: ExtDepFalse
     AxiVersion:
-      enable: True
+      enable: ParentFalse
       ScratchPad: 0x000000
       FpgaReloadHalt: 0x0
       FpgaReloadAddress: 0x0
       UserReset: 0x0
     CypressS25Fl:
-      enable: True
+      enable: ParentFalse
     Xadc:
-      enable: True
+      enable: ParentFalse
     ClinkTop:
-      enable: True
+      enable: ParentFalse
       RstPll: 0x0
       Ch[0]:
-        enable: True
+        enable: ParentFalse
         LinkMode: Disable
         DataMode: None
         FrameMode: None
         TapCount: 0x0
         DataEn: False
         Blowoff: False
-        SerThrottle: 10000
+        SerThrottle: 0
         BaudRate: 57600
         SwControlValue: 0x0
         SwControlEn: 0x0
         UartOpal1000:
-          enable: True
+          enable: ParentFalse
           ID: ''
           BS: ''
           CCE[0]: ''
@@ -1377,43 +1377,43 @@ ClinkDevRoot:
           OVL: ''
           FSP: ''
       Ch[1]:
-        enable: True
+        enable: ParentFalse
         LinkMode: Disable
         DataMode: None
         FrameMode: None
         TapCount: 0x0
         DataEn: False
         Blowoff: False
-        SerThrottle: 10000
+        SerThrottle: 0
         BaudRate: 9600
         SwControlValue: 0x0
         SwControlEn: 0x0
       Pll[0]:
-        enable: True
+        enable: ParentFalse
         PHASE_MUX[0]: 0x0
-        HIGH_TIME[0]: 0x7
-        LOW_TIME[0]: 0x7
+        HIGH_TIME[0]: 0x0
+        LOW_TIME[0]: 0x0
         PHASE_MUX[1]: 0x0
-        HIGH_TIME[1]: 0x1
-        LOW_TIME[1]: 0x1
+        HIGH_TIME[1]: 0x0
+        LOW_TIME[1]: 0x0
         PHASE_MUX[2]: 0x0
-        HIGH_TIME[2]: 0x1
-        LOW_TIME[2]: 0x1
+        HIGH_TIME[2]: 0x0
+        LOW_TIME[2]: 0x0
         PHASE_MUX[3]: 0x0
-        HIGH_TIME[3]: 0x1
-        LOW_TIME[3]: 0x1
+        HIGH_TIME[3]: 0x0
+        LOW_TIME[3]: 0x0
         PHASE_MUX[4]: 0x0
-        HIGH_TIME[4]: 0x1
-        LOW_TIME[4]: 0x1
+        HIGH_TIME[4]: 0x0
+        LOW_TIME[4]: 0x0
         PHASE_MUX[5]: 0x0
-        HIGH_TIME[5]: 0x1
-        LOW_TIME[5]: 0x1
+        HIGH_TIME[5]: 0x0
+        LOW_TIME[5]: 0x0
         PHASE_MUX[6]: 0x0
-        HIGH_TIME[6]: 0x1
-        LOW_TIME[6]: 0x1
+        HIGH_TIME[6]: 0x0
+        LOW_TIME[6]: 0x0
         PHASE_MUX_FB: 0x0
-        HIGH_TIME_FB: 0x7
-        LOW_TIME_FB: 0x7
+        HIGH_TIME_FB: 0x0
+        LOW_TIME_FB: 0x0
         FRAC[0]: 0x0
         FRAC_EN[0]: 0x0
         FRAC_WF_R[0]: 0x0
@@ -1427,27 +1427,27 @@ ClinkDevRoot:
         DELAY_TIME[1]: 0x0
         MX[2]: 0x0
         EDGE[2]: 0x0
-        NO_COUNT[2]: 0x1
+        NO_COUNT[2]: 0x0
         DELAY_TIME[2]: 0x0
         MX[3]: 0x0
         EDGE[3]: 0x0
-        NO_COUNT[3]: 0x1
+        NO_COUNT[3]: 0x0
         DELAY_TIME[3]: 0x0
         MX[4]: 0x0
         EDGE[4]: 0x0
-        NO_COUNT[4]: 0x1
+        NO_COUNT[4]: 0x0
         DELAY_TIME[4]: 0x0
         PHASE_MUX_F_CLKOUT[0]: 0x0
         FRAC_WF_F_CLKOUT[0]: 0x0
         MX[5]: 0x0
         EDGE[5]: 0x0
-        NO_COUNT[5]: 0x1
+        NO_COUNT[5]: 0x0
         DELAY_TIME[5]: 0x0
         PHASE_MUX_F_CLKOUT_FB: 0x0
         FRAC_WF_F_CLKOUT_FB: 0x0
         MX[6]: 0x0
         EDGE[6]: 0x0
-        NO_COUNT[6]: 0x1
+        NO_COUNT[6]: 0x0
         DELAY_TIME[6]: 0x0
         FRAC_FB: 0x0
         FRAC_EN_FB: 0x0
@@ -1457,41 +1457,41 @@ ClinkDevRoot:
         NO_COUNT_FB: 0x0
         DELAY_TIME_FB: 0x0
         EDGE_DIV: 0x0
-        NO_COUNT_DIV: 0x1
-        HIGH_TIME_DIV: 0x1
-        LOW_TIME_DIV: 0x1
-        LockReg[0]: 0x2bc
-        LockReg[1]: 0x7c01
-        LockReg[2]: 0xffe9
-        FiltReg[0]: 0x9908
-        FiltReg[1]: 0x8100
+        NO_COUNT_DIV: 0x0
+        HIGH_TIME_DIV: 0x0
+        LOW_TIME_DIV: 0x0
+        LockReg[0]: 0x0
+        LockReg[1]: 0x0
+        LockReg[2]: 0x0
+        FiltReg[0]: 0x0
+        FiltReg[1]: 0x0
         POWER: 0xffff
       Pll[1]:
-        enable: True
+        enable: ParentFalse
         PHASE_MUX[0]: 0x0
-        HIGH_TIME[0]: 0x7
-        LOW_TIME[0]: 0x7
+        HIGH_TIME[0]: 0x0
+        LOW_TIME[0]: 0x0
         PHASE_MUX[1]: 0x0
-        HIGH_TIME[1]: 0x1
-        LOW_TIME[1]: 0x1
+        HIGH_TIME[1]: 0x0
+        LOW_TIME[1]: 0x0
         PHASE_MUX[2]: 0x0
-        HIGH_TIME[2]: 0x1
-        LOW_TIME[2]: 0x1
+        HIGH_TIME[2]: 0x0
+        LOW_TIME[2]: 0x0
         PHASE_MUX[3]: 0x0
-        HIGH_TIME[3]: 0x1
-        LOW_TIME[3]: 0x1
+        HIGH_TIME[3]: 0x0
+        LOW_TIME[3]: 0x0
         PHASE_MUX[4]: 0x0
-        HIGH_TIME[4]: 0x1
-        LOW_TIME[4]: 0x1
+        HIGH_TIME[4]: 0x0
+        LOW_TIME[4]: 0x0
         PHASE_MUX[5]: 0x0
-        HIGH_TIME[5]: 0x1
-        LOW_TIME[5]: 0x1
+        HIGH_TIME[5]: 0x0
+        LOW_TIME[5]: 0x0
         PHASE_MUX[6]: 0x0
-        HIGH_TIME[6]: 0x1
-        LOW_TIME[6]: 0x1
+        HIGH_TIME[6]: 0x0
+        LOW_TIME[6]: 0x0
         PHASE_MUX_FB: 0x0
-        HIGH_TIME_FB: 0x7
-        LOW_TIME_FB: 0x7
+        HIGH_TIME_FB: 0x0
+        LOW_TIME_FB: 0x0
         FRAC[0]: 0x0
         FRAC_EN[0]: 0x0
         FRAC_WF_R[0]: 0x0
@@ -1505,27 +1505,27 @@ ClinkDevRoot:
         DELAY_TIME[1]: 0x0
         MX[2]: 0x0
         EDGE[2]: 0x0
-        NO_COUNT[2]: 0x1
+        NO_COUNT[2]: 0x0
         DELAY_TIME[2]: 0x0
         MX[3]: 0x0
         EDGE[3]: 0x0
-        NO_COUNT[3]: 0x1
+        NO_COUNT[3]: 0x0
         DELAY_TIME[3]: 0x0
         MX[4]: 0x0
         EDGE[4]: 0x0
-        NO_COUNT[4]: 0x1
+        NO_COUNT[4]: 0x0
         DELAY_TIME[4]: 0x0
         PHASE_MUX_F_CLKOUT[0]: 0x0
         FRAC_WF_F_CLKOUT[0]: 0x0
         MX[5]: 0x0
         EDGE[5]: 0x0
-        NO_COUNT[5]: 0x1
+        NO_COUNT[5]: 0x0
         DELAY_TIME[5]: 0x0
         PHASE_MUX_F_CLKOUT_FB: 0x0
         FRAC_WF_F_CLKOUT_FB: 0x0
         MX[6]: 0x0
         EDGE[6]: 0x0
-        NO_COUNT[6]: 0x1
+        NO_COUNT[6]: 0x0
         DELAY_TIME[6]: 0x0
         FRAC_FB: 0x0
         FRAC_EN_FB: 0x0
@@ -1535,41 +1535,41 @@ ClinkDevRoot:
         NO_COUNT_FB: 0x0
         DELAY_TIME_FB: 0x0
         EDGE_DIV: 0x0
-        NO_COUNT_DIV: 0x1
-        HIGH_TIME_DIV: 0x1
-        LOW_TIME_DIV: 0x1
-        LockReg[0]: 0x2bc
-        LockReg[1]: 0x7c01
-        LockReg[2]: 0xffe9
-        FiltReg[0]: 0x9908
-        FiltReg[1]: 0x8100
+        NO_COUNT_DIV: 0x0
+        HIGH_TIME_DIV: 0x0
+        LOW_TIME_DIV: 0x0
+        LockReg[0]: 0x0
+        LockReg[1]: 0x0
+        LockReg[2]: 0x0
+        FiltReg[0]: 0x0
+        FiltReg[1]: 0x0
         POWER: 0xffff
       Pll[2]:
-        enable: True
+        enable: ParentFalse
         PHASE_MUX[0]: 0x0
-        HIGH_TIME[0]: 0x7
-        LOW_TIME[0]: 0x7
+        HIGH_TIME[0]: 0x0
+        LOW_TIME[0]: 0x0
         PHASE_MUX[1]: 0x0
-        HIGH_TIME[1]: 0x1
-        LOW_TIME[1]: 0x1
+        HIGH_TIME[1]: 0x0
+        LOW_TIME[1]: 0x0
         PHASE_MUX[2]: 0x0
-        HIGH_TIME[2]: 0x1
-        LOW_TIME[2]: 0x1
+        HIGH_TIME[2]: 0x0
+        LOW_TIME[2]: 0x0
         PHASE_MUX[3]: 0x0
-        HIGH_TIME[3]: 0x1
-        LOW_TIME[3]: 0x1
+        HIGH_TIME[3]: 0x0
+        LOW_TIME[3]: 0x0
         PHASE_MUX[4]: 0x0
-        HIGH_TIME[4]: 0x1
-        LOW_TIME[4]: 0x1
+        HIGH_TIME[4]: 0x0
+        LOW_TIME[4]: 0x0
         PHASE_MUX[5]: 0x0
-        HIGH_TIME[5]: 0x1
-        LOW_TIME[5]: 0x1
+        HIGH_TIME[5]: 0x0
+        LOW_TIME[5]: 0x0
         PHASE_MUX[6]: 0x0
-        HIGH_TIME[6]: 0x1
-        LOW_TIME[6]: 0x1
+        HIGH_TIME[6]: 0x0
+        LOW_TIME[6]: 0x0
         PHASE_MUX_FB: 0x0
-        HIGH_TIME_FB: 0x7
-        LOW_TIME_FB: 0x7
+        HIGH_TIME_FB: 0x0
+        LOW_TIME_FB: 0x0
         FRAC[0]: 0x0
         FRAC_EN[0]: 0x0
         FRAC_WF_R[0]: 0x0
@@ -1583,27 +1583,27 @@ ClinkDevRoot:
         DELAY_TIME[1]: 0x0
         MX[2]: 0x0
         EDGE[2]: 0x0
-        NO_COUNT[2]: 0x1
+        NO_COUNT[2]: 0x0
         DELAY_TIME[2]: 0x0
         MX[3]: 0x0
         EDGE[3]: 0x0
-        NO_COUNT[3]: 0x1
+        NO_COUNT[3]: 0x0
         DELAY_TIME[3]: 0x0
         MX[4]: 0x0
         EDGE[4]: 0x0
-        NO_COUNT[4]: 0x1
+        NO_COUNT[4]: 0x0
         DELAY_TIME[4]: 0x0
         PHASE_MUX_F_CLKOUT[0]: 0x0
         FRAC_WF_F_CLKOUT[0]: 0x0
         MX[5]: 0x0
         EDGE[5]: 0x0
-        NO_COUNT[5]: 0x1
+        NO_COUNT[5]: 0x0
         DELAY_TIME[5]: 0x0
         PHASE_MUX_F_CLKOUT_FB: 0x0
         FRAC_WF_F_CLKOUT_FB: 0x0
         MX[6]: 0x0
         EDGE[6]: 0x0
-        NO_COUNT[6]: 0x1
+        NO_COUNT[6]: 0x0
         DELAY_TIME[6]: 0x0
         FRAC_FB: 0x0
         FRAC_EN_FB: 0x0
@@ -1613,35 +1613,35 @@ ClinkDevRoot:
         NO_COUNT_FB: 0x0
         DELAY_TIME_FB: 0x0
         EDGE_DIV: 0x0
-        NO_COUNT_DIV: 0x1
-        HIGH_TIME_DIV: 0x1
-        LOW_TIME_DIV: 0x1
-        LockReg[0]: 0x2bc
-        LockReg[1]: 0x7c01
-        LockReg[2]: 0xffe9
-        FiltReg[0]: 0x9908
-        FiltReg[1]: 0x8100
+        NO_COUNT_DIV: 0x0
+        HIGH_TIME_DIV: 0x0
+        LOW_TIME_DIV: 0x0
+        LockReg[0]: 0x0
+        LockReg[1]: 0x0
+        LockReg[2]: 0x0
+        FiltReg[0]: 0x0
+        FiltReg[1]: 0x0
         POWER: 0xffff
       PllConfig[0]: ''
       PllConfig[1]: ''
       PllConfig[2]: ''
     TrigCtrl[0]:
-      enable: True
+      enable: ParentFalse
       EnableTrig: False
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
-      TrigMask: 0x1
+      TrigPulseWidthRaw: 0x0
+      TrigPulseWidth: 0.008
+      TrigMask: 0x0
     TrigCtrl[1]:
-      enable: True
+      enable: ParentFalse
       EnableTrig: False
       InvCC: False
-      TrigMap: ChB
-      TrigPulseWidthRaw: 0xfff
-      TrigPulseWidth: 32.768
-      TrigMask: 0x1
+      TrigMap: ChA
+      TrigPulseWidthRaw: 0x0
+      TrigPulseWidth: 0.008
+      TrigMask: 0x0
     PgpMon[0]:
-      enable: True
+      enable: ParentFalse
     PgpMon[1]:
-      enable: True
+      enable: ParentFalse
