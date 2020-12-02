@@ -1,0 +1,22 @@
+# When new firmware is released:
+1.	Download tarball
+	wget https://github.com/slaclab/cameralink-gateway/releases/download/v4.4.0/rogue_v4.4.0.zip
+
+2.	Checkout tag and if needed, remove old firmware images
+	git checkout v4.4.0
+	git checkout -b R4.4.0-0.branch
+	# Note, not needed typically as these images aren't in tags
+	git rm -f python/cameralink_gateway/images/*.mcs 
+
+3.	Install new firmware images
+	unzip rogue_v4.4.0.zip "*.mcs.gz"
+	gunzip  -f python/cameralink_gateway/images/*.gz
+	git add -f python/cameralink_gateway/images/*.mcs 
+	git ci -m "Installed firmware images for rogue_v4.4.0"
+
+Note:
+2020-01-16 Larry Ruckman a0c4c17 backing up progress
+software/python/ClinkDev.py
+moved to
+firmware/common/pcie/python/ClinkDev/_ClinkDevKcu1500Root.py
+
