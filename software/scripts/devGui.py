@@ -11,11 +11,10 @@
 
 import os
 import sys
+import time
 import argparse
 import importlib
 import rogue
-import pyrogue.gui
-import pyrogue.pydm
 
 if __name__ == "__main__":
 
@@ -144,11 +143,14 @@ if __name__ == "__main__":
         type     = str,
         required = False,
         default  = 'PyDM',
-        help     = "Sets the GUI type (PyDM or PyQt)",
+        help     = "Sets the GUI type (PyDM, PyQt, or None)",
     )
-
     # Get the arguments
     args = parser.parse_args()
+
+    if args.guiType == 'PyDM' or args.guiType == 'PyQt':
+        import pyrogue.gui
+        import pyrogue.pydm
 
     #################################################################
 
@@ -214,6 +216,21 @@ if __name__ == "__main__":
 
             # Run gui
             appTop.exec_()
+            root.stop()
+
+        #################
+        # No GUI
+        #################
+        elif (args.guiType == 'None'):
+
+            # Wait to be killed via Ctrl-C
+            print('Running root server.  Hit Ctrl-C to exit')
+            try:
+                while True:
+                    time.sleep(1)
+            except:
+                pass
+            print('Stopping root server...')
             root.stop()
 
         ####################
