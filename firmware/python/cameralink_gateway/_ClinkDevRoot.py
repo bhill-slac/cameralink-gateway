@@ -61,6 +61,8 @@ class ClinkDevRoot(shared.Root):
         self.standAloneMode = standAloneMode
         self.enableDump     = enableDump
 
+        print(f'Initializing {laneSize} lanes: camType={camType}, defaultFile={defaultFile}')
+
         # Check for simulation
         if dev == 'sim':
             kwargs['timeout'] = 100000000 # 100 s
