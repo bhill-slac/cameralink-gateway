@@ -151,6 +151,14 @@ if __name__ == "__main__":
         help     = "Sets the default YAML configuration file to be loaded at the root.start()",
     )
 
+    parser.add_argument(
+        "--guiType",
+        type     = str,
+        required = False,
+        default  = 'PyDM',
+        help     = "Sets the GUI type (PyDM or PyQt)",
+    )
+
     # Get the arguments
     args = parser.parse_args()
 
