@@ -1,8 +1,7 @@
 #!/usr/bin/bash
 #
 python scripts/devGui \
-	--camType Opal1000 BaslerAce Opal1000 Opal1000\
-	--defaultFile config/Opal1000.yml \
+	--laneConfig 0=Opal1000 1=BaslerAce \
 	--startupMode False \
 	--standAloneMode False \
 	--enableDump  True \
