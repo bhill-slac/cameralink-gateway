@@ -11,7 +11,6 @@
 import pyrogue as pr
 import rogue
 import click
-import time
 
 import cameralink_gateway as clDev
 import axipcie
@@ -183,31 +182,6 @@ class ClinkDevRoot(shared.Root):
             mode        = 'RO',
             value       = False,
         ))
-
-        # Do a FEB FpgaReload
-        doFpgaReload = False
-        if doFpgaReload:
-            for lane in range(self.numLanes):
-                print('Reloading FEB[%u] FPGA firmware from PROM ....\n' % lane)
-                self.ClinkFeb[lane].AxiVersion.FpgaReload()
-
-            for i in range(5):
-                # Check for PGP link up
-                if (	self.ClinkPcie.Hsio.PgpMon[0].RxRemLinkReady.get()
-                    and	self.ClinkPcie.Hsio.PgpMon[1].RxRemLinkReady.get()
-                    and	self.ClinkPcie.Hsio.PgpMon[2].RxRemLinkReady.get()
-                    and	self.ClinkPcie.Hsio.PgpMon[3].RxRemLinkReady.get() ):
-                    break;
-                time.sleep(1)
-            if (	self.ClinkPcie.Hsio.PgpMon[0].RxRemLinkReady.get()
-                and	self.ClinkPcie.Hsio.PgpMon[1].RxRemLinkReady.get()
-                and	self.ClinkPcie.Hsio.PgpMon[2].RxRemLinkReady.get()
-                and	self.ClinkPcie.Hsio.PgpMon[3].RxRemLinkReady.get() ):
-                print('Reloading all FEB FPGA done\n')
-            else:
-                for lane in range(self.numLanes):
-                    if not self.ClinkPcie.Hsio.PgpMon[lane].RxRemLinkReady.get():
-                        print('Timeout reloading FEB[%u] FPGA!\n' % lane)
 
         @self.command(description  = 'Stops the triggers and blows off data in the pipeline')
         def StopRun():
