@@ -697,44 +697,38 @@ ClinkDevRoot:
       RstPll: 0x0
       Ch[0]:
         enable: True
-        LinkMode: Base
+        LinkMode: Medium
         DataMode: 12Bit
         FrameMode: Frame
-        TapCount: 0x2
+        TapCount: 0x4
         DataEn: True
         Blowoff: False
         SerThrottle: 10000
-        BaudRate: 57600
+        BaudRate: 9600
         SwControlValue: 0x0
         SwControlEn: 0x0
-        UartOpal1000:
+        UartBaslerAce:
           enable: True
-          ID: ''
-          BS: ''
-          CCE[0]: '0'
-          CCE[1]: '0'
-          CCFS[0]: '0'
-          CCFS[1]: '0'
-          DPE: '1'
-          FP: ''
-          FSM: '0'
-          FST[0]: '0'
-          FST[1]: '1'
-          GA: '100'
-          IT: ''
-          MI: '0'
-          MO: '1'
-          OFS: ''
-          OR: '12'
-          TP: '0'
-          VBIN: '0'
-          WB[0]: ''
-          WB[1]: ''
-          WB[2]: ''
-          BL: '20'
-          VR: '1'
-          OVL: ''
-          FSP: ''
+          TapGeometry: '9'
+          PixelClock: '23'
+          DigitizationTaps: ''
+          BitDepth: '12'
+          PixelFormat: '5'
+          BinningHorizontal: ''
+          BinningVertical: ''
+          StackedZoneImagingEnable: ''
+          DecimationHorizontal: ''
+          DecimationVertical: ''
+          TrigModeAcqStart: ''
+          AcqFrameCnt: ''
+          TrigSrcAcqStart: ''
+          TrigActAcqStart: ''
+          TrigModeFrameStart: '1'
+          TrigSrcFrameStart: '9'
+          TrigActFrameStart: '0'
+          TrigSrcLineStart: ''
+          TrigActLineStart: ''
+          ExposureMode: '2'
       Pll[0]:
         enable: True
         PHASE_MUX[0]: 0x0
@@ -975,7 +969,7 @@ ClinkDevRoot:
     TrigCtrl[0]:
       enable: True
       EnableTrig: True
-      InvCC: False
+      InvCC: True
       TrigMap: ChA
       TrigPulseWidthRaw: 0xfff
       TrigPulseWidth: 32.768

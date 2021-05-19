@@ -43,28 +43,28 @@ ClinkDevRoot:
           enable: True
           Bypass: 0x4
           Timeout: 0x0
-          Blowoff: True
+          Blowoff: False
       AppLane[1]:
         enable: True
         EventBuilder:
           enable: True
           Bypass: 0x4
           Timeout: 0x0
-          Blowoff: True
+          Blowoff: False
       AppLane[2]:
         enable: True
         EventBuilder:
           enable: True
-          Bypass: 0x0
+          Bypass: 0x4
           Timeout: 0x0
-          Blowoff: True
+          Blowoff: False
       AppLane[3]:
         enable: True
         EventBuilder:
           enable: True
-          Bypass: 0x0
+          Bypass: 0x4
           Timeout: 0x0
-          Blowoff: True
+          Blowoff: False
     Hsio:
       enable: True
       PgpMon[0]:
@@ -327,25 +327,25 @@ ClinkDevRoot:
             TxId: 0x0
           TriggerEventBuffer[0]:
             enable: True
-            MasterEnable: False
+            MasterEnable: True
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
           TriggerEventBuffer[1]:
             enable: True
-            MasterEnable: False
+            MasterEnable: True
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
           TriggerEventBuffer[2]:
             enable: True
-            MasterEnable: False
+            MasterEnable: True
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
           TriggerEventBuffer[3]:
             enable: True
-            MasterEnable: False
+            MasterEnable: True
             Partition: 0
             PauseThreshold: 16
             TriggerDelay: 42
@@ -704,37 +704,31 @@ ClinkDevRoot:
         DataEn: True
         Blowoff: False
         SerThrottle: 10000
-        BaudRate: 57600
+        BaudRate: 9600
         SwControlValue: 0x0
         SwControlEn: 0x0
-        UartOpal1000:
+        UartBaslerAce:
           enable: True
-          ID: ''
-          BS: ''
-          CCE[0]: ''
-          CCE[1]: ''
-          CCFS[0]: ''
-          CCFS[1]: ''
-          DPE: ''
-          FP: ''
-          FSM: ''
-          FST[0]: ''
-          FST[1]: ''
-          GA: ''
-          IT: ''
-          MI: ''
-          MO: ''
-          OFS: ''
-          OR: ''
-          TP: ''
-          VBIN: ''
-          WB[0]: ''
-          WB[1]: ''
-          WB[2]: ''
-          BL: ''
-          VR: ''
-          OVL: ''
-          FSP: ''
+          TapGeometry: ''
+          PixelClock: ''
+          DigitizationTaps: ''
+          BitDepth: ''
+          PixelFormat: ''
+          BinningHorizontal: ''
+          BinningVertical: ''
+          StackedZoneImagingEnable: ''
+          DecimationHorizontal: ''
+          DecimationVertical: ''
+          TrigModeAcqStart: ''
+          AcqFrameCnt: ''
+          TrigSrcAcqStart: ''
+          TrigActAcqStart: ''
+          TrigModeFrameStart: ''
+          TrigSrcFrameStart: ''
+          TrigActFrameStart: ''
+          TrigSrcLineStart: ''
+          TrigActLineStart: ''
+          ExposureMode: ''
       Pll[0]:
         enable: True
         PHASE_MUX[0]: 0x0
@@ -1020,10 +1014,10 @@ ClinkDevRoot:
       RstPll: 0x0
       Ch[0]:
         enable: True
-        LinkMode: Disable
-        DataMode: None
-        FrameMode: None
-        TapCount: 0x0
+        LinkMode: Base
+        DataMode: 12Bit
+        FrameMode: Frame
+        TapCount: 0x2
         DataEn: True
         Blowoff: False
         SerThrottle: 10000
@@ -1297,12 +1291,12 @@ ClinkDevRoot:
       PllConfig[2]: ''
     TrigCtrl[0]:
       enable: True
-      EnableTrig: False
+      EnableTrig: True
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x1e847
-      TrigPulseWidth: 1000.000
-      TrigMask: 0x0
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
+      TrigMask: 0x1
     PgpMon[0]:
       enable: True
     PgpMon[1]:
