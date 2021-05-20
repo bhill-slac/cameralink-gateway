@@ -2,7 +2,7 @@
 #	--laneConfig 0=Opal1000 1=BaslerAce \
 #
 python scripts/devGui \
-	--laneConfig 0=Opal1000 1=Opal1000 2=Opal1000 3=Opal1000\
+	--laneConfig 0=Opal1000 1=BaslerAce 2=Opal1000 3=Opal1000\
 	--startupMode False \
 	--standAloneMode False \
 	--enableDump  True \
