@@ -20,6 +20,7 @@ ClinkTop:
       # 4.2 Transport Layer Registers
       ###############################
       TapGeometry: '9' # 9 = CLGeometry1X4_1Y: The tap geometry is 1X4-1Y.
+      # Note: PixelClock value 23 is ClClock82, but it's pixel clock speed is 82 MHz.
       PixelClock: '23' # 23 = CLClock82: The pixel clock speed is 84 MHz.
       ############################
       # 4.4 Image Format Registers
