@@ -57,14 +57,14 @@ ClinkDevRoot:
           enable: True
           Bypass: 0x4
           Timeout: 0x0
-          Blowoff: True
+          Blowoff: False
       AppLane[3]:
         enable: True
         EventBuilder:
           enable: True
-          Bypass: 0x0
+          Bypass: 0x4
           Timeout: 0x0
-          Blowoff: True
+          Blowoff: False
     Hsio:
       enable: True
       PgpMon[0]:
@@ -189,7 +189,7 @@ ClinkDevRoot:
           enable: True
           RxPolarity: 0x0
           ClkSel: LCLS-I Clock
-          RxDown: 0x1
+          RxDown: 0x0
           BypassRst: 0x0
           RxPllReset: 0x0
           ModeSel: Lcls1Protocol
@@ -248,7 +248,7 @@ ClinkDevRoot:
             Link: 0
             Loopback: False
             HwEnable: False
-            Config_L0Select_Enabled: False
+            Config_L0Select_Enabled: True
             Config_L0Select_RateSel: 100 Hz
             Config_L0Select_DestSel: 0x8000
             Pipeline_Depth_Clks: 20000
@@ -262,28 +262,28 @@ ClinkDevRoot:
               enable: True
               EnableReg: True
               RateType: ControlWord
-              RateSel: 0x28
+              RateSel: 0x2a
               DestType: All
               DestSel: 0x0
             EvrV2ChannelReg[1]:
               enable: True
               EnableReg: True
               RateType: ControlWord
-              RateSel: 0x2d
+              RateSel: 0x2a
               DestType: All
               DestSel: 0x0
             EvrV2ChannelReg[2]:
               enable: True
               EnableReg: True
               RateType: ControlWord
-              RateSel: 0x2d
+              RateSel: 0x2a
               DestType: All
               DestSel: 0x0
             EvrV2ChannelReg[3]:
               enable: True
               EnableReg: True
               RateType: ControlWord
-              RateSel: 0x28
+              RateSel: 0x2a
               DestType: All
               DestSel: 0x0
             EvrV2TriggerReg[0]:
@@ -298,7 +298,7 @@ ClinkDevRoot:
             EvrV2TriggerReg[1]:
               enable: True
               EnableTrig: True
-              Source: 0x1
+              Source: 0x0
               Polarity: Rising
               ComplEn: Disabled
               ComplAnd: LogicOR
@@ -307,7 +307,7 @@ ClinkDevRoot:
             EvrV2TriggerReg[2]:
               enable: True
               EnableTrig: True
-              Source: 0x2
+              Source: 0x0
               Polarity: Rising
               ComplEn: Disabled
               ComplAnd: LogicOR
@@ -316,7 +316,7 @@ ClinkDevRoot:
             EvrV2TriggerReg[3]:
               enable: True
               EnableTrig: True
-              Source: 0x3
+              Source: 0x0
               Polarity: Rising
               ComplEn: Disabled
               ComplAnd: LogicOR
@@ -374,11 +374,11 @@ ClinkDevRoot:
       RstPll: 0x0
       Ch[0]:
         enable: True
-        LinkMode: Base
-        DataMode: 12Bit
-        FrameMode: Frame
-        TapCount: 0x2
-        DataEn: True
+        LinkMode: Disable
+        DataMode: None
+        FrameMode: None
+        TapCount: 0x0
+        DataEn: False
         Blowoff: False
         SerThrottle: 10000
         BaudRate: 57600
@@ -651,11 +651,11 @@ ClinkDevRoot:
       PllConfig[2]: ''
     TrigCtrl[0]:
       enable: True
-      EnableTrig: True
+      EnableTrig: False
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x1e847
-      TrigPulseWidth: 1000.000
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
       TrigMask: 0x1
     PgpMon[0]:
       enable: True
@@ -697,11 +697,11 @@ ClinkDevRoot:
       RstPll: 0x0
       Ch[0]:
         enable: True
-        LinkMode: Medium
-        DataMode: 12Bit
-        FrameMode: Frame
-        TapCount: 0x4
-        DataEn: True
+        LinkMode: Disable
+        DataMode: None
+        FrameMode: None
+        TapCount: 0x0
+        DataEn: False
         Blowoff: False
         SerThrottle: 10000
         BaudRate: 9600
@@ -969,10 +969,10 @@ ClinkDevRoot:
     TrigCtrl[0]:
       enable: True
       EnableTrig: False
-      InvCC: True
+      InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x1000
-      TrigPulseWidth: 32.776
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
       TrigMask: 0x1
     PgpMon[0]:
       enable: True
@@ -1014,11 +1014,11 @@ ClinkDevRoot:
       RstPll: 0x0
       Ch[0]:
         enable: True
-        LinkMode: Base
-        DataMode: 12Bit
-        FrameMode: Frame
-        TapCount: 0x2
-        DataEn: True
+        LinkMode: Disable
+        DataMode: None
+        FrameMode: None
+        TapCount: 0x0
+        DataEn: False
         Blowoff: False
         SerThrottle: 10000
         BaudRate: 57600
@@ -1294,8 +1294,8 @@ ClinkDevRoot:
       EnableTrig: False
       InvCC: False
       TrigMap: ChA
-      TrigPulseWidthRaw: 0x1e847
-      TrigPulseWidth: 1000.000
+      TrigPulseWidthRaw: 0xfff
+      TrigPulseWidth: 32.768
       TrigMask: 0x1
     PgpMon[0]:
       enable: True
