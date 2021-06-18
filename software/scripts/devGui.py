@@ -202,8 +202,9 @@ if __name__ == "__main__":
             sizeY = 1000,
         )
         
-        # Dump the address map
-        root.saveAddressMap( "addressMapDump.dump" )
-        root.saveAddressMap( "addressMapDump.h", headerEn=True )
+        if args.enableDump:
+            # Dump the address map
+            root.saveAddressMap( "addressMapDump.dump" )
+            root.saveAddressMap( "addressMapDump.h", headerEn=True )
 
     #################################################################
