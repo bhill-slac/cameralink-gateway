@@ -204,9 +204,10 @@ if __name__ == "__main__":
             seuDumpDir     = args.seuDumpDir,
         ) as root:
 
-        # Dump the address map
-        root.saveAddressMap( "addressMapDump.dump" )
-        root.saveAddressMap( "addressMapDump.h", headerEn=True )
+        if args.enableDump:
+            # Dump the address map
+            root.saveAddressMap( "addressMapDump.dump" )
+            root.saveAddressMap( "addressMapDump.h", headerEn=True )
 
         ######################
         # Development PyDM GUI
